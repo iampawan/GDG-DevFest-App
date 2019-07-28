@@ -18,6 +18,7 @@ class ConfigBloc extends Bloc<ConfigEvent, ConfigState> {
     ConfigEvent event,
   ) async* {
     try {
+      yield UnConfigState();
       yield await event.applyAsync(currentState: currentState, bloc: this);
     } catch (_, stackTrace) {
       print('$_ $stackTrace');

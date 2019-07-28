@@ -1,6 +1,13 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_devfest/dialogs/loading_dialog.dart';
+import 'package:flutter_devfest/home/home_widgets/home_front.dart';
 import 'package:flutter_devfest/home/index.dart';
+import 'package:flutter_devfest/utils/devfest.dart';
+import 'package:flutter_devfest/utils/tools.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -13,7 +20,7 @@ class HomeScreen extends StatefulWidget {
 
   @override
   HomeScreenState createState() {
-    return new HomeScreenState(_homeBloc);
+    return HomeScreenState(_homeBloc);
   }
 }
 
@@ -42,19 +49,18 @@ class HomeScreenState extends State<HomeScreen> {
         ) {
           if (currentState is UnHomeState) {
             return Center(
-              child: CircularProgressIndicator(),
+              child: SpinKitChasingDots(
+                color: Tools.multiColors[Random().nextInt(3)],
+              ),
             );
           }
           if (currentState is ErrorHomeState) {
-            return new Container(
-              child: new Center(
-              child: new Text(currentState.errorMessage ?? 'Error' ),
+            return Container(
+                child: Center(
+              child: Text(currentState.errorMessage ?? 'Error'),
             ));
           }
-          return new Container(
-              child: new Center(
-            child: new Text("В разработке"),
-          ));
+          return HomeFront();
         });
   }
 }
