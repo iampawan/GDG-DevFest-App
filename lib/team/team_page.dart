@@ -5,13 +5,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/home/home_bloc.dart';
 import 'package:flutter_devfest/home/speaker.dart';
+import 'package:flutter_devfest/home/team.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class SpeakerPage extends StatelessWidget {
-  static const String routeName = "/speakers";
+class TeamPage extends StatelessWidget {
+  static const String routeName = "/team";
 
   Widget socialActions(context) => Wrap(
         alignment: WrapAlignment.center,
@@ -76,7 +77,7 @@ class SpeakerPage extends StatelessWidget {
                       ),
                       child: CachedNetworkImage(
                         fit: BoxFit.cover,
-                        imageUrl: speakers[i].speakerImage,
+                        imageUrl: teams[i].image,
                       ),
                     ),
                     SizedBox(
@@ -93,7 +94,7 @@ class SpeakerPage extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
                               Text(
-                                speakers[i].speakerName,
+                                teams[i].name,
                                 style: Theme.of(context).textTheme.title,
                               ),
                               SizedBox(
@@ -111,14 +112,14 @@ class SpeakerPage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            speakers[i].speakerDesc,
+                            teams[i].desc,
                             style: Theme.of(context).textTheme.subtitle,
                           ),
                           SizedBox(
                             height: 10,
                           ),
                           Text(
-                            speakers[i].speakerSession,
+                            teams[i].contribution,
                             style: Theme.of(context).textTheme.caption,
                           ),
                           socialActions(context),
@@ -129,9 +130,9 @@ class SpeakerPage extends StatelessWidget {
                 )),
           );
         },
-        itemCount: speakers.length,
+        itemCount: teams.length,
       ),
-      title: "Speakers",
+      title: "Team",
     );
   }
 }

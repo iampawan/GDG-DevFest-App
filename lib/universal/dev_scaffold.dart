@@ -6,8 +6,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class DevScaffold extends StatelessWidget {
   final String title;
   final Widget body;
+  final Widget tabBar;
 
-  const DevScaffold({Key key, @required this.body, @required this.title})
+  const DevScaffold(
+      {Key key, @required this.body, @required this.title, this.tabBar})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -19,6 +21,7 @@ class DevScaffold extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             title: Text(title),
+            bottom: tabBar != null ? tabBar : null,
             actions: <Widget>[
               IconButton(
                 icon: Icon(

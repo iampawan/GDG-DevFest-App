@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_devfest/agenda/agenda_page.dart';
+import 'package:flutter_devfest/faq/faq_page.dart';
 import 'package:flutter_devfest/speakers/speaker_page.dart';
+import 'package:flutter_devfest/sponsors/sponsor_page.dart';
+import 'package:flutter_devfest/team/team_page.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeFront extends StatelessWidget {
   List<Widget> devFestTexts(context) => [
@@ -29,37 +34,37 @@ class HomeFront extends StatelessWidget {
             shape: StadiumBorder(),
             color: Colors.red,
             colorBrightness: Brightness.dark,
-            onPressed: () {},
+            onPressed: () => Navigator.pushNamed(context, AgendaPage.routeName),
           ),
           RaisedButton(
             child: Text("Speakers"),
             shape: StadiumBorder(),
             color: Colors.green,
             colorBrightness: Brightness.dark,
-            onPressed: () {
-              Navigator.pushNamed(context, SpeakerPage.routeName);
-            },
+            onPressed: () =>
+                Navigator.pushNamed(context, SpeakerPage.routeName),
           ),
           RaisedButton(
             child: Text("Sponsors"),
             shape: StadiumBorder(),
             color: Colors.orange,
             colorBrightness: Brightness.dark,
-            onPressed: () {},
+            onPressed: () =>
+                Navigator.pushNamed(context, SponsorPage.routeName),
           ),
           RaisedButton(
             child: Text("Team"),
             shape: StadiumBorder(),
             color: Colors.purple,
             colorBrightness: Brightness.dark,
-            onPressed: () {},
+            onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
           ),
           RaisedButton(
             child: Text("FAQ"),
             shape: StadiumBorder(),
             color: Colors.brown,
             colorBrightness: Brightness.dark,
-            onPressed: () {},
+            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
           ),
           RaisedButton(
             child: Text("Find a DevFest"),
@@ -77,15 +82,21 @@ class HomeFront extends StatelessWidget {
         children: <Widget>[
           IconButton(
             icon: Icon(FontAwesomeIcons.facebookF),
-            onPressed: () {},
+            onPressed: () {
+              launch("https://facebook.com/imthepk");
+            },
           ),
           IconButton(
             icon: Icon(FontAwesomeIcons.twitter),
-            onPressed: () {},
+            onPressed: () {
+              launch("https://twitter.com/imthepk");
+            },
           ),
           IconButton(
             icon: Icon(FontAwesomeIcons.linkedinIn),
-            onPressed: () {},
+            onPressed: () {
+              launch("https://linkedin.com/in/imthepk");
+            },
           ),
         ],
       );
