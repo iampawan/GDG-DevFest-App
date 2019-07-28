@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/home/home_page.dart';
+import 'package:flutter_devfest/speakers/speaker_page.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
 
 class ConfigPage extends StatefulWidget {
@@ -53,6 +54,10 @@ class _ConfigPageState extends State<ConfigPage> {
               ),
             ),
             home: HomePage(),
+            routes: {
+              HomePage.routeName: (context) => HomePage(),
+              SpeakerPage.routeName: (context) => SpeakerPage(),
+            },
           );
         },
       ),
