@@ -67,18 +67,18 @@ List<Team> teams = [
         "https://imagevars.gulfnews.com/2019/07/24/190724-Salman-Khan_16c24162f1f_large.jpg",
   ),
   Team(
-    name: "Pawan Kumar",
-    desc: "Co-Organizer",
-    contribution: "Developed the app",
-    image:
-        "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
-  ),
-  Team(
     name: "Larry Page",
     desc: "Co-Organizer",
     contribution: "Design",
     image:
         "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5c76bcaaa7ea43100043c836%2F400x400.jpg%3Ffit%3Dscale%26background%3D000000",
+  ),
+  Team(
+    name: "Pawan Kumar",
+    desc: "Co-Organizer",
+    contribution: "Developed the app",
+    image:
+        "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
   ),
   Team(
     name: "Pawan Kumar",
