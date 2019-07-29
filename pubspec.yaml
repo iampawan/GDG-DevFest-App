@@ -30,6 +30,8 @@ dependencies:
   cached_network_image: ^1.1.1
   shared_preferences: ^0.5.3+4
   flutter_spinkit: "^3.1.0"
+  sliding_up_panel: ^0.3.4
+  google_maps_flutter: ^0.5.19+2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
