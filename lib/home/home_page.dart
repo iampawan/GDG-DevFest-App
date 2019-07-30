@@ -2,9 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/home/index.dart';
-import 'package:flutter_devfest/home/speaker.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share/share.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
@@ -16,24 +14,23 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var _homeBloc = HomeBloc();
-    BorderRadiusGeometry radius = BorderRadius.only(
-      topLeft: Radius.circular(24.0),
-      topRight: Radius.circular(24.0),
-    );
+    // BorderRadiusGeometry radius = BorderRadius.only(
+    //   topLeft: Radius.circular(24.0),
+    //   topRight: Radius.circular(24.0),
+    // );
 
     return DevScaffold(
       body: SlidingUpPanel(
         parallaxEnabled: true,
-
-        // borderRadius: radius,
+        backdropEnabled: true,
+        backdropTapClosesPanel: true,
         maxHeight: MediaQuery.of(context).size.height * 0.6,
-        color: ConfigBloc().darkModeOn ? Colors.black : Colors.white,
+        color: Theme.of(context).primaryColor,
         panel: HomeSlidingPanel(),
         collapsed: AnimatedContainer(
           duration: Duration(milliseconds: 500),
           decoration: BoxDecoration(
-            color: ConfigBloc().darkModeOn ? Colors.black : Colors.white,
-            // borderRadius: radius,
+            color: Theme.of(context).primaryColor,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -54,18 +51,27 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   CircleAvatar(
-                    radius: 15,
-                    backgroundImage:
-                        CachedNetworkImageProvider(speakers[0].speakerImage),
+                    maxRadius: 20,
+                    backgroundImage: CachedNetworkImageProvider(
+                        "https://pbs.twimg.com/media/D22N_huX4AEbb1y.jpg"),
+                  ),
+                  SizedBox(
+                    width: 20,
                   ),
                   Text(
-                    "Explore DevFest",
+                    "Locate Us",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.title,
                   ),
-                  InkWell(
-                    onTap: () => Share.share("Sharing DevFest App"),
-                    child: Icon(Icons.share),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  IconButton(
+                    onPressed: () => Share.share("Sharing DevFest App"),
+                    icon: Icon(
+                      Icons.share,
+                      size: 20,
+                    ),
                   ),
                 ],
               ),

@@ -26,6 +26,14 @@ class HomeFront extends StatelessWidget {
         ),
       ];
 
+  _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   Widget actions(context) => Wrap(
         alignment: WrapAlignment.center,
         spacing: 10.0,
@@ -79,24 +87,45 @@ class HomeFront extends StatelessWidget {
 
   Widget socialActions(context) => Wrap(
         alignment: WrapAlignment.center,
-        spacing: 20.0,
+        spacing: 10.0,
         children: <Widget>[
           IconButton(
             icon: Icon(FontAwesomeIcons.facebookF),
-            onPressed: () {
-              launch("https://facebook.com/imthepk");
+            onPressed: () async {
+              await _launchURL("https://facebook.com/imthepk");
             },
           ),
           IconButton(
             icon: Icon(FontAwesomeIcons.twitter),
-            onPressed: () {
-              launch("https://twitter.com/imthepk");
+            onPressed: () async {
+              await _launchURL("https://twitter.com/imthepk");
             },
           ),
           IconButton(
             icon: Icon(FontAwesomeIcons.linkedinIn),
-            onPressed: () {
-              launch("https://linkedin.com/in/imthepk");
+            onPressed: () async {
+              _launchURL("https://linkedin.com/in/imthepk");
+            },
+          ),
+          IconButton(
+            icon: Icon(FontAwesomeIcons.youtube),
+            onPressed: () async {
+              await _launchURL("https://youtube.com/mtechviral");
+            },
+          ),
+          IconButton(
+            icon: Icon(FontAwesomeIcons.meetup),
+            onPressed: () async {
+              await _launchURL("https://meetup.com/");
+            },
+          ),
+          IconButton(
+            icon: Icon(FontAwesomeIcons.envelope),
+            onPressed: () async {
+              var emailUrl =
+                  '''mailto:mtechviral@gmail.com?subject=Support Needed For DevFest App&body={Name: Pawan Kumar},Email: pawan221b@gmail.com}''';
+              var out = Uri.encodeFull(emailUrl);
+              await _launchURL(out);
             },
           ),
         ],

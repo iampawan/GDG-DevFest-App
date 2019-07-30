@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_devfest/home/index.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 
 class SponsorPage extends StatelessWidget {
@@ -7,7 +6,7 @@ class SponsorPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _homeBloc = HomeBloc();
+    // var _homeBloc = HomeBloc();
     return DevScaffold(
       body: ListView(
         children: <Widget>[
