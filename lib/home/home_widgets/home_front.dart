@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/agenda/agenda_page.dart';
 import 'package:flutter_devfest/faq/faq_page.dart';
+import 'package:flutter_devfest/find_devfest/find_devfest_page.dart';
 import 'package:flutter_devfest/speakers/speaker_page.dart';
 import 'package:flutter_devfest/sponsors/sponsor_page.dart';
 import 'package:flutter_devfest/team/team_page.dart';
@@ -80,7 +81,8 @@ class HomeFront extends StatelessWidget {
             shape: StadiumBorder(),
             color: Colors.blue,
             colorBrightness: Brightness.dark,
-            onPressed: () {},
+            onPressed: () =>
+                Navigator.pushNamed(context, FindDevFestPage.routeName),
           ),
         ],
       );

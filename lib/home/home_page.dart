@@ -51,12 +51,12 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   CircleAvatar(
-                    maxRadius: 20,
+                    radius: 15,
                     backgroundImage: CachedNetworkImageProvider(
                         "https://pbs.twimg.com/media/D22N_huX4AEbb1y.jpg"),
                   ),
                   SizedBox(
-                    width: 20,
+                    width: 15,
                   ),
                   Text(
                     "Locate Us",
@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
                     style: Theme.of(context).textTheme.title,
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 0,
                   ),
                   IconButton(
                     onPressed: () => Share.share("Sharing DevFest App"),
