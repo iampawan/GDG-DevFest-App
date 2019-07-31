@@ -1,4 +1,4 @@
-# flutter_devfest
+# GDG DevFest App
 
 A new Flutter project.
 
