@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_devfest/agenda/agenda_page.dart';
 import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/faq/faq_page.dart';
-import 'package:flutter_devfest/find_devfest/find_devfest_page.dart';
 import 'package:flutter_devfest/map/map_page.dart';
 import 'package:flutter_devfest/speakers/speaker_page.dart';
 import 'package:flutter_devfest/sponsors/sponsor_page.dart';
@@ -88,50 +87,51 @@ class HomeFront extends StatelessWidget {
         ],
       );
 
-  Widget socialActions(context) => Wrap(
-        alignment: WrapAlignment.center,
-        spacing: 10.0,
-        children: <Widget>[
-          IconButton(
-            icon: Icon(FontAwesomeIcons.facebookF),
-            onPressed: () async {
-              await _launchURL("https://facebook.com/imthepk");
-            },
-          ),
-          IconButton(
-            icon: Icon(FontAwesomeIcons.twitter),
-            onPressed: () async {
-              await _launchURL("https://twitter.com/imthepk");
-            },
-          ),
-          IconButton(
-            icon: Icon(FontAwesomeIcons.linkedinIn),
-            onPressed: () async {
-              _launchURL("https://linkedin.com/in/imthepk");
-            },
-          ),
-          IconButton(
-            icon: Icon(FontAwesomeIcons.youtube),
-            onPressed: () async {
-              await _launchURL("https://youtube.com/mtechviral");
-            },
-          ),
-          IconButton(
-            icon: Icon(FontAwesomeIcons.meetup),
-            onPressed: () async {
-              await _launchURL("https://meetup.com/");
-            },
-          ),
-          IconButton(
-            icon: Icon(FontAwesomeIcons.envelope),
-            onPressed: () async {
-              var emailUrl =
-                  '''mailto:mtechviral@gmail.com?subject=Support Needed For DevFest App&body={Name: Pawan Kumar},Email: pawan221b@gmail.com}''';
-              var out = Uri.encodeFull(emailUrl);
-              await _launchURL(out);
-            },
-          ),
-        ],
+  Widget socialActions(context) => FittedBox(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(FontAwesomeIcons.facebookF),
+              onPressed: () async {
+                await _launchURL("https://facebook.com/imthepk");
+              },
+            ),
+            IconButton(
+              icon: Icon(FontAwesomeIcons.twitter),
+              onPressed: () async {
+                await _launchURL("https://twitter.com/imthepk");
+              },
+            ),
+            IconButton(
+              icon: Icon(FontAwesomeIcons.linkedinIn),
+              onPressed: () async {
+                _launchURL("https://linkedin.com/in/imthepk");
+              },
+            ),
+            IconButton(
+              icon: Icon(FontAwesomeIcons.youtube),
+              onPressed: () async {
+                await _launchURL("https://youtube.com/mtechviral");
+              },
+            ),
+            IconButton(
+              icon: Icon(FontAwesomeIcons.meetup),
+              onPressed: () async {
+                await _launchURL("https://meetup.com/");
+              },
+            ),
+            IconButton(
+              icon: Icon(FontAwesomeIcons.envelope),
+              onPressed: () async {
+                var emailUrl =
+                    '''mailto:mtechviral@gmail.com?subject=Support Needed For DevFest App&body={Name: Pawan Kumar},Email: pawan221b@gmail.com}''';
+                var out = Uri.encodeFull(emailUrl);
+                await _launchURL(out);
+              },
+            ),
+          ],
+        ),
       );
 
   @override

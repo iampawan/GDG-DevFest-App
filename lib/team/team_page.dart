@@ -13,47 +13,48 @@ import 'package:url_launcher/url_launcher.dart';
 class TeamPage extends StatelessWidget {
   static const String routeName = "/team";
 
-  Widget socialActions(context) => Wrap(
-        alignment: WrapAlignment.center,
-        spacing: 10.0,
-        children: <Widget>[
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.facebookF,
-              size: 15,
+  Widget socialActions(context) => FittedBox(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(
+                FontAwesomeIcons.facebookF,
+                size: 15,
+              ),
+              onPressed: () {
+                launch(speakers[0].fbUrl);
+              },
             ),
-            onPressed: () {
-              launch(speakers[0].fbUrl);
-            },
-          ),
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.twitter,
-              size: 15,
+            IconButton(
+              icon: Icon(
+                FontAwesomeIcons.twitter,
+                size: 15,
+              ),
+              onPressed: () {
+                launch(speakers[0].twitterUrl);
+              },
             ),
-            onPressed: () {
-              launch(speakers[0].twitterUrl);
-            },
-          ),
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.linkedinIn,
-              size: 15,
+            IconButton(
+              icon: Icon(
+                FontAwesomeIcons.linkedinIn,
+                size: 15,
+              ),
+              onPressed: () {
+                launch(speakers[0].linkedinUrl);
+              },
             ),
-            onPressed: () {
-              launch(speakers[0].linkedinUrl);
-            },
-          ),
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.github,
-              size: 15,
+            IconButton(
+              icon: Icon(
+                FontAwesomeIcons.github,
+                size: 15,
+              ),
+              onPressed: () {
+                launch(speakers[0].githubUrl);
+              },
             ),
-            onPressed: () {
-              launch(speakers[0].githubUrl);
-            },
-          ),
-        ],
+          ],
+        ),
       );
   @override
   Widget build(BuildContext context) {

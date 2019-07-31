@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_devfest/config/config_bloc.dart';
 import 'package:flutter_devfest/config/config_event.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:share/share.dart';
 
 class DevScaffold extends StatelessWidget {
   final String title;
@@ -36,7 +37,15 @@ class DevScaffold extends StatelessWidget {
                   ConfigBloc()
                       .dispatch(DarkModeEvent(!ConfigBloc().darkModeOn));
                 },
-              )
+              ),
+              IconButton(
+                onPressed: () => Share.share(
+                    "Download the new DevFest App and share with your tech friends.\nPlayStore -  http://bit.ly/2GDr18N"),
+                icon: Icon(
+                  Icons.share,
+                  size: 20,
+                ),
+              ),
             ],
           ),
           body: body,

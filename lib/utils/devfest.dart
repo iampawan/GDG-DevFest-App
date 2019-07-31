@@ -16,7 +16,7 @@ class Devfest {
   static const String banner_dark = "assets/images/banner_dark.png";
 
   //*  Texts
-  static const String welcomeText = "Welcome to DevFest";
+  static const String welcomeText = "Welcome to GDG DevFest";
   static const String descText =
       '''DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building and learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.
 While no two DevFests will be exactly alike, each at its core is powered by a shared belief that when developers come together to exchange ideas, amazing things can happen.''';
