@@ -3,7 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_devfest/agenda/agenda_page.dart';
 import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/faq/faq_page.dart';
+import 'package:flutter_devfest/find_devfest/find_devfest_page.dart';
 import 'package:flutter_devfest/home/home_page.dart';
+import 'package:flutter_devfest/map/map_page.dart';
 import 'package:flutter_devfest/speakers/speaker_page.dart';
 import 'package:flutter_devfest/sponsors/sponsor_page.dart';
 import 'package:flutter_devfest/team/team_page.dart';
@@ -26,7 +28,8 @@ class _ConfigPageState extends State<ConfigPage> {
 
   setupApp() {
     configBloc = ConfigBloc();
-    configBloc.darkModeOn = Devfest.prefs.getBool(Devfest.darkModePref) ?? true;
+    configBloc.darkModeOn =
+        Devfest.prefs.getBool(Devfest.darkModePref) ?? false;
   }
 
   @override
@@ -65,6 +68,8 @@ class _ConfigPageState extends State<ConfigPage> {
               SponsorPage.routeName: (context) => SponsorPage(),
               TeamPage.routeName: (context) => TeamPage(),
               FaqPage.routeName: (context) => FaqPage(),
+              FindDevFestPage.routeName: (context) => FindDevFestPage(),
+              MapPage.routeName: (context) => MapPage(),
             },
           );
         },

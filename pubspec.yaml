@@ -11,7 +11,7 @@ description: A new Flutter project.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.0.3+4
 
 environment:
   sdk: ">=2.2.2 <3.0.0"
@@ -23,13 +23,14 @@ dependencies:
   flutter_bloc: ^0.20.0
   equatable: ^0.3.0
   share: ^0.6.2+1
-  google_sign_in: ^4.0.4
   url_launcher: ^5.1.1
   http: ^0.12.0+2
   font_awesome_flutter: ^8.5.0
   cached_network_image: ^1.1.1
   shared_preferences: ^0.5.3+4
   flutter_spinkit: "^3.1.0"
+  sliding_up_panel: ^0.3.4
+  google_maps_flutter: ^0.5.19+2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -50,6 +51,7 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/
     - assets/images/
   # assets:
   #  - images/a_dot_burr.jpeg

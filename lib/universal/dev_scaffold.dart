@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_devfest/config/config_bloc.dart';
 import 'package:flutter_devfest/config/config_event.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:share/share.dart';
 
 class DevScaffold extends StatelessWidget {
   final String title;
@@ -13,14 +14,16 @@ class DevScaffold extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Theme.of(context).primaryColor,
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 500),
+      color: ConfigBloc().darkModeOn ? Colors.grey[800] : Colors.white,
       child: SafeArea(
         top: false,
-        bottom: true,
+        bottom: false,
         child: Scaffold(
           appBar: AppBar(
             title: Text(title),
+            centerTitle: true,
             bottom: tabBar != null ? tabBar : null,
             actions: <Widget>[
               IconButton(
@@ -34,19 +37,18 @@ class DevScaffold extends StatelessWidget {
                   ConfigBloc()
                       .dispatch(DarkModeEvent(!ConfigBloc().darkModeOn));
                 },
-              )
+              ),
+              IconButton(
+                onPressed: () => Share.share(
+                    "Download the new DevFest App and share with your tech friends.\nPlayStore -  http://bit.ly/2GDr18N"),
+                icon: Icon(
+                  Icons.share,
+                  size: 20,
+                ),
+              ),
             ],
           ),
           body: body,
-          // drawer: Drawer(),
-          // floatingActionButtonLocation:
-          //     FloatingActionButtonLocation.centerFloat,
-          // floatingActionButton: FloatingActionButton.extended(
-          //   label: Text("Find a DevFest"),
-          //   backgroundColor: Colors.blue,
-          //   foregroundColor: Colors.white,
-          //   onPressed: () {},
-          // ),
         ),
       ),
     );
