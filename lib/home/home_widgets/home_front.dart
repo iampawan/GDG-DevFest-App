@@ -158,7 +158,14 @@ class HomeFront extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            socialActions(context)
+            socialActions(context),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              Devfest.app_version,
+              style: Theme.of(context).textTheme.caption.copyWith(fontSize: 10),
+            )
           ],
         ),
       ),
