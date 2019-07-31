@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/agenda/agenda_page.dart';
+import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/faq/faq_page.dart';
 import 'package:flutter_devfest/find_devfest/find_devfest_page.dart';
 import 'package:flutter_devfest/speakers/speaker_page.dart';
@@ -142,7 +143,9 @@ class HomeFront extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ImageCard(
-              img: Devfest.home_img,
+              img: ConfigBloc().darkModeOn
+                  ? Devfest.banner_dark
+                  : Devfest.banner_light,
             ),
             SizedBox(
               height: 20,

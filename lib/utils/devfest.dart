@@ -12,6 +12,8 @@ class Devfest {
 
   //* Images
   static const String home_img = "assets/images/home_img.jpeg";
+  static const String banner_light = "assets/images/banner_light.png";
+  static const String banner_dark = "assets/images/banner_dark.png";
 
   //*  Texts
   static const String welcomeText = "Welcome to DevFest";

@@ -67,7 +67,8 @@ class HomePage extends StatelessWidget {
                     width: 0,
                   ),
                   IconButton(
-                    onPressed: () => Share.share("Sharing DevFest App"),
+                    onPressed: () => Share.share(
+                        "Download the new DevFest App and share with your tech friends.\nPlayStore -  http://bit.ly/2GDr18N"),
                     icon: Icon(
                       Icons.share,
                       size: 20,
