@@ -14,7 +14,7 @@ class SpeakerPage extends StatelessWidget {
 
   Widget socialActions(context) => FittedBox(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
               icon: Icon(

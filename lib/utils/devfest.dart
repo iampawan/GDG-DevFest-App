@@ -18,7 +18,7 @@ class Devfest {
   //*  Texts
   static const String welcomeText = "Welcome to GDG DevFest";
   static const String descText =
-      '''DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building and learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.''';
+      '''DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building & learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.''';
 
   static const String loading_text = "Loading...";
   static const String try_again_text = "Try Again";
