@@ -2,11 +2,11 @@
 <img width="800px"  src="https://i.imgur.com/P21Hk0u.png">
 </p>
 <p align="center">
-<a href='http://bit.ly/2GDr18N'><img alt='Get it on Google Play' src='https://goldtonemusicgroup.com/img/goldtone/main-page/news/playstore-badge.png' height='48px'/></a>
-<a href='https://apple.co/2YC0Zgb'><img alt='Get it on the App Store' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png' height='48px'/></a>
+<a target="_blank" href='http://bit.ly/2GDr18N'><img alt='Get it on Google Play' src='https://goldtonemusicgroup.com/img/goldtone/main-page/news/playstore-badge.png' height='48px'/></a>
+<a target="_blank" href='https://apple.co/2YC0Zgb'><img alt='Get it on the App Store' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png' height='48px'/></a>
 
 </p>
-<p><a href="#getting-started">:rocket: Get Started</a></p>
+<p align="center"><a href="#getting-started">:rocket: Get Started</a></p>
 
 |             Light Theme              |              Dark Theme              |
 | :----------------------------------: | :----------------------------------: |
