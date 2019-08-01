@@ -60,16 +60,15 @@ List<Team> teams = [
         "https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_400x400.jpg",
   ),
   Team(
-    name: "Salman",
-    desc: "Travels",
+    name: "Vrijraj",
+    desc: "Co-Organizer",
     contribution: "Logistics and travels",
-    image:
-        "https://imagevars.gulfnews.com/2019/07/24/190724-Salman-Khan_16c24162f1f_large.jpg",
+    image: "https://avatars2.githubusercontent.com/u/10599101?s=460&v=4",
   ),
   Team(
     name: "Larry Page",
     desc: "Co-Organizer",
-    contribution: "Design",
+    contribution: "Founder",
     image:
         "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5c76bcaaa7ea43100043c836%2F400x400.jpg%3Ffit%3Dscale%26background%3D000000",
   ),

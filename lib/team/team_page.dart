@@ -15,7 +15,7 @@ class TeamPage extends StatelessWidget {
 
   Widget socialActions(context) => FittedBox(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
               icon: Icon(
@@ -104,7 +104,7 @@ class TeamPage extends StatelessWidget {
                                 duration: Duration(seconds: 1),
                                 width: MediaQuery.of(context).size.width * 0.2,
                                 height: 5,
-                                color: Tools.multiColors[Random().nextInt(3)],
+                                color: Tools.multiColors[Random().nextInt(4)],
                               ),
                             ],
                           ),

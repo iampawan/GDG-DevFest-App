@@ -9,6 +9,6 @@ class Tools {
     Colors.red,
     Colors.amber,
     Colors.green,
-    Colors.blue
+    Colors.blue,
   ];
 }

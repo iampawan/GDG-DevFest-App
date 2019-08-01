@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/agenda/session_detail.dart';
 import 'package:flutter_devfest/home/session.dart';
+import 'package:flutter_devfest/utils/tools.dart';
 
 class SessionList extends StatelessWidget {
   @override
@@ -47,6 +50,7 @@ class SessionList extends StatelessWidget {
             leading: Hero(
               tag: sessions[i].speakerImage,
               child: CircleAvatar(
+                radius: 30,
                 backgroundImage:
                     CachedNetworkImageProvider(sessions[i].speakerImage),
               ),
@@ -54,12 +58,13 @@ class SessionList extends StatelessWidget {
             title: RichText(
               text: TextSpan(
                 text: "${sessions[i].sessionTitle}\n",
-                style: Theme.of(context).textTheme.title.copyWith(fontSize: 14),
+                style: Theme.of(context).textTheme.title.copyWith(fontSize: 16),
                 children: [
                   TextSpan(
                       text: sessions[i].speakerName,
                       style: Theme.of(context).textTheme.subtitle.copyWith(
-                            fontSize: 12,
+                            fontSize: 14,
+                            color: Tools.multiColors[Random().nextInt(4)],
                           ),
                       children: []),
                 ],
