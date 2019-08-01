@@ -21,7 +21,7 @@ class AgendaPage extends StatelessWidget {
         title: "Agenda",
         tabBar: TabBar(
           indicatorSize: TabBarIndicatorSize.label,
-          indicatorColor: Tools.multiColors[Random().nextInt(3)],
+          indicatorColor: Tools.multiColors[Random().nextInt(4)],
           labelStyle: TextStyle(
             fontSize: 12,
           ),

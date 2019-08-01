@@ -14,7 +14,7 @@ class LoadHomeEvent extends HomeEvent {
   @override
   Future<HomeState> applyAsync({HomeState currentState, HomeBloc bloc}) async {
     try {
-      await Future.delayed(new Duration(seconds: 2));
+      await Future.delayed(new Duration(seconds: 1));
 
       return new InHomeState();
     } catch (_, stackTrace) {

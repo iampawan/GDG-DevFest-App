@@ -1,12 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/home/index.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
-import 'package:share/share.dart';
-import 'package:sliding_up_panel/sliding_up_panel.dart';
-
-import 'home_widgets/home_sliding_panel.dart';
 
 class HomePage extends StatelessWidget {
   static const String routeName = "/home";

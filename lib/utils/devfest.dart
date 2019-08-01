@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Devfest {
   static const String app_name = "Devfest";
-  static const String app_version = "Version 1.0.3";
+  static const String app_version = "Version 1.0.4";
   static const int app_version_code = 1;
   static const String app_color = "#ffd7167";
   static Color primaryAppColor = Colors.white;
@@ -18,8 +18,7 @@ class Devfest {
   //*  Texts
   static const String welcomeText = "Welcome to GDG DevFest";
   static const String descText =
-      '''DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building and learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.
-While no two DevFests will be exactly alike, each at its core is powered by a shared belief that when developers come together to exchange ideas, amazing things can happen.''';
+      '''DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building and learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.''';
 
   static const String loading_text = "Loading...";
   static const String try_again_text = "Try Again";
@@ -36,6 +35,14 @@ While no two DevFests will be exactly alike, each at its core is powered by a sh
       "Please update your app for seamless experience.";
   static const String checkNetText =
       "It seems like your internet connection is not active.";
+
+  //* ActionTexts
+  static const String agenda_text = "Agenda";
+  static const String speakers_text = "Speakers";
+  static const String team_text = "Team";
+  static const String sponsor_text = "Sponsors";
+  static const String faq_text = "FAQ";
+  static const String map_text = "Locate Us";
 
   //* Preferences
   static SharedPreferences prefs;

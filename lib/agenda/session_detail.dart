@@ -95,8 +95,8 @@ class SessionDetail extends StatelessWidget {
                 "${session.speakerDesc}",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.title.copyWith(
-                      fontSize: 12,
-                      color: Tools.multiColors[Random().nextInt(3)],
+                      fontSize: 14,
+                      color: Tools.multiColors[Random().nextInt(4)],
                     ),
               ),
               SizedBox(

@@ -103,7 +103,7 @@ class SpeakerPage extends StatelessWidget {
                                 duration: Duration(seconds: 1),
                                 width: MediaQuery.of(context).size.width * 0.2,
                                 height: 5,
-                                color: Tools.multiColors[Random().nextInt(3)],
+                                color: Tools.multiColors[Random().nextInt(4)],
                               ),
                             ],
                           ),
