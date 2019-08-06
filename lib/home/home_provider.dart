@@ -1,4 +1,5 @@
 import 'package:flutter_devfest/network/i_client.dart';
+import 'package:flutter_devfest/utils/dependency_injection.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
 
 abstract class IHomeProvider {
@@ -10,7 +11,9 @@ class HomeProvider implements IHomeProvider {
 
   final String kConstGetSpeakersUrl = "${Devfest.baseUrl}/speaker-kol.json";
 
-  HomeProvider(this._client);
+  HomeProvider() {
+    _client = Injector().currentClient;
+  }
 
   @override
   Future getSpeakers() async {

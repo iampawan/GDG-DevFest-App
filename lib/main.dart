@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_devfest/utils/dependency_injection.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
 import 'package:flutter_devfest/utils/simple_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,6 +15,7 @@ Future<void> main() async {
     ),
   );
 
+  //* Forcing only portrait orientation
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
@@ -25,6 +27,9 @@ Future<void> main() async {
 
   //* Time travel debugging to check app states
   BlocSupervisor.delegate = SimpleBlocDelegate();
+
+  // * Set flavor for your app. For eg - MOCK for offline, REST for some random server calls, FIREBASE for firebase calls
+  Injector.configure(Flavor.REST);
 
   runApp(ConfigPage());
 }
