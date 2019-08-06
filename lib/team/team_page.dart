@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_devfest/home/speaker.dart';
 import 'package:flutter_devfest/home/team.dart';
+import 'package:flutter_devfest/home/team_member.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -23,7 +23,7 @@ class TeamPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].fbUrl);
+                launch(members[0].fbUrl);
               },
             ),
             IconButton(
@@ -32,7 +32,7 @@ class TeamPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].twitterUrl);
+                launch(members[0].twitterUrl);
               },
             ),
             IconButton(
@@ -41,7 +41,7 @@ class TeamPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].linkedinUrl);
+                launch(members[0].linkedinUrl);
               },
             ),
             IconButton(
@@ -50,7 +50,7 @@ class TeamPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].githubUrl);
+                launch(members[0].githubUrl);
               },
             ),
           ],

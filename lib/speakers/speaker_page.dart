@@ -9,10 +9,29 @@ import 'package:flutter_devfest/utils/tools.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class SpeakerPage extends StatelessWidget {
+class SpeakerPage extends StatefulWidget {
   static const String routeName = "/speakers";
 
-  Widget socialActions(context) => FittedBox(
+  @override
+  State<StatefulWidget> createState() => SpeakerPageState();
+}
+
+class SpeakerPageState extends State<SpeakerPage> {
+  List<Speaker> speakers;
+
+  @override
+  void initState() {
+    initSpeakerList();
+    super.initState();
+  }
+
+  void initSpeakerList() async {
+    speakers = List();
+    Stream<Speaker> stream = await getSpeakers();
+    stream.listen((speaker) => setState(() => speakers.add(speaker)));
+  }
+
+  Widget socialActions(context, index) => FittedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -22,7 +41,7 @@ class SpeakerPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].fbUrl);
+                launch(speakers[index].fbUrl);
               },
             ),
             IconButton(
@@ -31,7 +50,7 @@ class SpeakerPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].twitterUrl);
+                launch(speakers[index].twitterUrl);
               },
             ),
             IconButton(
@@ -40,7 +59,7 @@ class SpeakerPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].linkedinUrl);
+                launch(speakers[index].linkedinUrl);
               },
             ),
             IconButton(
@@ -49,7 +68,7 @@ class SpeakerPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].githubUrl);
+                launch(speakers[index].githubUrl);
               },
             ),
           ],
@@ -121,7 +140,7 @@ class SpeakerPage extends StatelessWidget {
                             speakers[i].speakerSession,
                             style: Theme.of(context).textTheme.caption,
                           ),
-                          socialActions(context),
+                          socialActions(context, i),
                         ],
                       ),
                     )
