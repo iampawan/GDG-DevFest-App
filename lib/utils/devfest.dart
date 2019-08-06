@@ -12,11 +12,12 @@ class Devfest {
   static bool isDebugMode = false;
 
   // * Url related
-  static String baseUrl = "https://storage.googleapis.com/gdg-devfest/";
+  static String baseUrl = "https://storage.googleapis.com/gdg-devfest";
 
   static checkDebug() {
     assert(() {
       baseUrl = "http://127.0.0.1:8000/gdg-devfest/";
+      // baseUrl = "https://storage.googleapis.com/gdg-devfest";
       isDebugMode = true;
       return true;
     }());

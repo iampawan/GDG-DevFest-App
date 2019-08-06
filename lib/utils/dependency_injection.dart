@@ -1,5 +1,4 @@
-import 'package:flutter_devfest/network/i_client.dart';
-import 'package:flutter_devfest/network/restclient.dart';
+import 'package:flutter_devfest/network/index.dart';
 
 enum Flavor { MOCK, REST, FIREBASE }
 
@@ -23,8 +22,8 @@ class Injector {
       case Flavor.MOCK:
         return MockClient();
       case Flavor.FIREBASE:
-      //* Yet to add
-      // return FirebaseClient();
+        //* Yet to add
+        return FirebaseClient();
       default:
         return RestClient();
     }

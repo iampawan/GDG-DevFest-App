@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter_devfest/home/speaker.dart';
 import 'package:meta/meta.dart';
 
 @immutable
@@ -22,12 +23,15 @@ class UnHomeState extends HomeState {
 
 /// Initialized
 class InHomeState extends HomeState {
+  final SpeakersData speakersData;
+
+  InHomeState({@required this.speakersData}) : super([speakersData]);
   @override
   String toString() => 'InHomeState';
 
   @override
   HomeState getStateCopy() {
-    return InHomeState();
+    return InHomeState(speakersData: this.speakersData);
   }
 }
 
@@ -35,7 +39,7 @@ class ErrorHomeState extends HomeState {
   final String errorMessage;
 
   ErrorHomeState(this.errorMessage);
-  
+
   @override
   String toString() => 'ErrorHomeState';
 

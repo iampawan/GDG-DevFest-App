@@ -4,9 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' show Client, Response;
 
-import 'i_client.dart';
-import 'network_service_response.dart';
-
+import 'index.dart';
 
 // * RestClient for HTTP Requests
 
@@ -31,7 +29,6 @@ class RestClient implements IClient {
     };
   }
 
-
 // * Method for HTTP GET REQUEST
   @override
   Future<MappedNetworkServiceResponse<T>> getAsync<T>(String resourcePath,
@@ -42,7 +39,6 @@ class RestClient implements IClient {
     );
     return await processResponse<T>(response);
   }
-
 
 // * Method for HTTP POST REQUEST
   @override
@@ -87,7 +83,6 @@ class RestClient implements IClient {
                   "(${response.statusCode}) Can't reach the servers, \n Please check your internet connection."));
     }
   }
-
 
 // * JSON Decoding using Isolates
   static Map<String, dynamic> jsonParserIsolate(String res) {

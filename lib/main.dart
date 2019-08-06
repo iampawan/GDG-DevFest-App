@@ -19,7 +19,7 @@ Future<void> main() async {
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
-  // ? Get Shared Preference Instance for whole app
+  // * Get Shared Preference Instance for whole app
   Devfest.prefs = await SharedPreferences.getInstance();
 
   //* To check the app is running in debug and set some variables for that
@@ -28,7 +28,7 @@ Future<void> main() async {
   //* Time travel debugging to check app states
   BlocSupervisor.delegate = SimpleBlocDelegate();
 
-  // * Set flavor for your app. For eg - MOCK for offline, REST for some random server calls, FIREBASE for firebase calls
+  // * Set flavor for your app. For eg - MOCK for offline, REST for some random server calls to your backend, FIREBASE for firebase calls
   Injector.configure(Flavor.REST);
 
   runApp(ConfigPage());

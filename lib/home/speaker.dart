@@ -1,3 +1,26 @@
+class SpeakersData {
+  List<Speaker> speakers;
+
+  SpeakersData({this.speakers});
+
+  SpeakersData.fromJson(Map<String, dynamic> json) {
+    if (json['speakers'] != null) {
+      speakers = new List<Speaker>();
+      json['speakers'].forEach((v) {
+        speakers.add(Speaker.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.speakers != null) {
+      data['speakers'] = this.speakers.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
 class Speaker {
   String speakerName;
   String speakerDesc;

@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_devfest/home/home_bloc.dart';
+import 'package:flutter_devfest/home/index.dart';
 import 'package:flutter_devfest/home/speaker.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
@@ -12,7 +14,7 @@ import 'package:url_launcher/url_launcher.dart';
 class SpeakerPage extends StatelessWidget {
   static const String routeName = "/speakers";
 
-  Widget socialActions(context) => FittedBox(
+  Widget socialActions(context, Speaker speaker) => FittedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -22,7 +24,7 @@ class SpeakerPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].fbUrl);
+                launch(speaker.fbUrl);
               },
             ),
             IconButton(
@@ -31,7 +33,7 @@ class SpeakerPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].twitterUrl);
+                launch(speaker.twitterUrl);
               },
             ),
             IconButton(
@@ -40,7 +42,7 @@ class SpeakerPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].linkedinUrl);
+                launch(speaker.linkedinUrl);
               },
             ),
             IconButton(
@@ -49,7 +51,7 @@ class SpeakerPage extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].githubUrl);
+                launch(speaker.githubUrl);
               },
             ),
           ],
@@ -57,7 +59,9 @@ class SpeakerPage extends StatelessWidget {
       );
   @override
   Widget build(BuildContext context) {
-    // var _homeBloc = HomeBloc();
+    var _homeBloc = HomeBloc();
+    var state = _homeBloc.currentState as InHomeState;
+    var speakers = state.speakersData.speakers;
     return DevScaffold(
       body: ListView.builder(
         shrinkWrap: true,
@@ -121,7 +125,7 @@ class SpeakerPage extends StatelessWidget {
                             speakers[i].speakerSession,
                             style: Theme.of(context).textTheme.caption,
                           ),
-                          socialActions(context),
+                          socialActions(context, speakers[0]),
                         ],
                       ),
                     )
