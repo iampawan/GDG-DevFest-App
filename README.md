@@ -132,13 +132,13 @@ If you try to build the project straight away, you'll get an error complaining t
         ]
     ```
 
-1)  Open [GDG-DevFest-App-master\lib\map\map_page.dart](https://github.com/iampawan/GDG-DevFest-App/blob/master/lib/map/map_page.dart) file and customise the lat long according to your needs. Eg-
+1.  Open [GDG-DevFest-App-master\lib\map\map_page.dart](https://github.com/iampawan/GDG-DevFest-App/blob/master/lib/map/map_page.dart) file and customise the lat long according to your needs. Eg-
 
     ```
        static final LatLng myLocation = LatLng(37.42796133580664,       -122.085749655962);
     ```
 
-1)  Open [GDG-DevFest-App-master\lib\sponsors\sponsor_page.dart](https://github.com/iampawan/GDG-DevFest-App/blob/master/lib/sponsors/sponsor_page.dart) file and customise the sponsors data according to your needs. Eg-
+1.  Open [GDG-DevFest-App-master\lib\sponsors\sponsor_page.dart](https://github.com/iampawan/GDG-DevFest-App/blob/master/lib/sponsors/sponsor_page.dart) file and customise the sponsors data according to your needs. Eg-
 
     ```
        SponsorImage(
