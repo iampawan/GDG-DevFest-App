@@ -9,6 +9,25 @@ class Devfest {
   static Color primaryAppColor = Colors.white;
   static Color secondaryAppColor = Colors.black;
   static const String google_sans_family = "GoogleSans";
+  static bool isDebugMode = false;
+
+  // * Url related
+  static String baseUrl = "https://storage.googleapis.com/gdg-devfest/";
+
+  static checkDebug() {
+    assert(() {
+      baseUrl = "http://127.0.0.1:8000/gdg-devfest/";
+      isDebugMode = true;
+      return true;
+    }());
+  }
+
+  static bool get checkDebugBool {
+    var debug = false;
+    assert(debug = true);
+
+    return debug;
+  }
 
   //* Images
   static const String home_img = "assets/images/home_img.jpeg";
