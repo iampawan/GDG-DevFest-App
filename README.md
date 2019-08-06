@@ -42,7 +42,7 @@ DevFest Mobile application is for all the GDG Devfests around the world. You can
 
 If you try to build the project straight away, you'll get an error complaining that a `key.properties` file is missing and Exit code 1 from: /GDG-DevFest-App-master/android/gradlew app:properties:. To resolve that,
 
-1.  Open r\GDG-DevFest-App-master\android\app\build.gradle file and comment following lines-
+1.  Open [GDG-DevFest-App-master\android\app\build.gradle](https://github.com/iampawan/GDG-DevFest-App/blob/master/android/app/build.gradle) file and comment following lines-
 
     ```
     //keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
@@ -118,7 +118,7 @@ If you try to build the project straight away, you'll get an error complaining t
         ]
     ```
 
-1)  Open [GDG-DevFest-App-master\lib\home\team.dart](https://github.com/iampawan/GDG-DevFest-App/blob/master/lib/home/team.dart) file and customise the teams according to your needs. Eg-
+1.  Open [GDG-DevFest-App-master\lib\home\team.dart](https://github.com/iampawan/GDG-DevFest-App/blob/master/lib/home/team.dart) file and customise the teams according to your needs. Eg-
 
     ```
         List<Team> teams = [
@@ -131,7 +131,6 @@ If you try to build the project straight away, you'll get an error complaining t
             ),
         ]
     ```
-
 
 1)  Open [GDG-DevFest-App-master\lib\map\map_page.dart](https://github.com/iampawan/GDG-DevFest-App/blob/master/lib/map/map_page.dart) file and customise the lat long according to your needs. Eg-
 
