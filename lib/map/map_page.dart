@@ -1,8 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_devfest/config/index.dart';
+import 'package:flutter_devfest/config/config_bloc.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -15,24 +13,15 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   GoogleMapController _controller;
   bool isMapCreated = false;
+  static final LatLng myLocation = LatLng(37.42796133580664, -122.085749655962);
 
   @override
   void initState() {
     super.initState();
   }
 
-  void _setMapStyle(String mapStyle) {
-    setState(() {
-      _controller.setMapStyle(mapStyle);
-    });
-  }
-
-  Future<String> _getFileData(String path) async {
-    return await rootBundle.loadString(path);
-  }
-
-  static final CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(37.42796133580664, -122.085749655962),
+  final CameraPosition _kGooglePlex = CameraPosition(
+    target: myLocation,
     zoom: 14.4746,
   );
 
@@ -40,25 +29,27 @@ class _MapPageState extends State<MapPage> {
     return <Marker>[
       Marker(
           markerId: MarkerId("marker_1"),
-          position: LatLng(37.42796133580664, -122.085749655962),
+          position: myLocation,
           icon: BitmapDescriptor.defaultMarkerWithHue(
             BitmapDescriptor.hueOrange,
           )),
     ].toSet();
   }
 
-  // static final CameraPosition _kLake = CameraPosition(
-  //     bearing: 192.8334901395799,
-  //     target: LatLng(37.43296265331129, -122.08832357078792),
-  //     tilt: 59.440717697143555,
-  //     zoom: 14.151926040649414);
-
   changeMapMode() {
     if (ConfigBloc().darkModeOn) {
-      _getFileData('assets/nightmode.json').then(_setMapStyle);
+      getJsonFile("assets/nightmode.json").then(setMapStyle);
     } else {
-      _getFileData('assets/daymode.json').then(_setMapStyle);
+      getJsonFile("assets/daymode.json").then(setMapStyle);
     }
+  }
+
+  Future<String> getJsonFile(String path) async {
+    return await rootBundle.loadString(path);
+  }
+
+  void setMapStyle(String mapStyle) {
+    _controller.setMapStyle(mapStyle);
   }
 
   @override
