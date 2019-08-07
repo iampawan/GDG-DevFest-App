@@ -16,8 +16,9 @@ class Devfest {
 
   static checkDebug() {
     assert(() {
-      baseUrl = "http://127.0.0.1:8000/gdg-devfest/";
-      // baseUrl = "https://storage.googleapis.com/gdg-devfest";
+      // baseUrl = "http://127.0.0.1:8000/gdg-devfest/";
+      // * Change with your local url if any
+      baseUrl = "https://storage.googleapis.com/gdg-devfest";
       isDebugMode = true;
       return true;
     }());

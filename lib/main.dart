@@ -29,7 +29,7 @@ Future<void> main() async {
   BlocSupervisor.delegate = SimpleBlocDelegate();
 
   // * Set flavor for your app. For eg - MOCK for offline, REST for some random server calls to your backend, FIREBASE for firebase calls
-  Injector.configure(Flavor.REST);
+  Injector.configure(Flavor.MOCK);
 
   runApp(ConfigPage());
 }
