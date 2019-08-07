@@ -1,3 +1,5 @@
+# GDG DEVFEST APP [![Codemagic build status](https://api.codemagic.io/apps/5d4af19b36524a001caa407a/5d4af19b36524a001caa4079/status_badge.svg)](https://codemagic.io/apps/5d4af19b36524a001caa407a/5d4af19b36524a001caa4079/latest_build)
+
 <p align="center">
 <img width="800px"  src="https://i.imgur.com/P21Hk0u.png">
 </p>
@@ -96,7 +98,7 @@ If you try to build the project straight away, you'll get an error complaining t
                     “https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4”,
                 speakerName: “Max Saltonstall”,
                 speakerDesc: “Cloud Developer Advocate, Google DevByte speaker”,
-                track: "cloud" 
+                track: "cloud"
             ),
         ]
     ```
