@@ -7,11 +7,14 @@ import 'package:flutter_devfest/home/session.dart';
 import 'package:flutter_devfest/utils/tools.dart';
 
 class SessionList extends StatelessWidget {
+  final List<Session> allSessions;
+
+  const SessionList({Key key, @required this.allSessions}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: false,
-      itemCount: sessions.length,
+      itemCount: allSessions.length,
       itemBuilder: (c, i) {
         // return Text("sdd");
         return Card(
@@ -22,7 +25,7 @@ class SessionList extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => SessionDetail(
-                    session: sessions[i],
+                    session: allSessions[i],
                   ),
                 ),
               );
@@ -32,14 +35,14 @@ class SessionList extends StatelessWidget {
             trailing: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: "${sessions[i].sessionTotalTime}\n",
+                text: "${allSessions[i].sessionTotalTime}\n",
                 style: Theme.of(context)
                     .textTheme
                     .title
                     .copyWith(fontSize: 14, fontWeight: FontWeight.bold),
                 children: [
                   TextSpan(
-                    text: sessions[i].sessionStartTime,
+                    text: allSessions[i].sessionStartTime,
                     style: Theme.of(context).textTheme.subtitle.copyWith(
                           fontSize: 12,
                         ),
@@ -48,20 +51,20 @@ class SessionList extends StatelessWidget {
               ),
             ),
             leading: Hero(
-              tag: sessions[i].speakerImage,
+              tag: allSessions[i].speakerImage,
               child: CircleAvatar(
                 radius: 30,
                 backgroundImage:
-                    CachedNetworkImageProvider(sessions[i].speakerImage),
+                    CachedNetworkImageProvider(allSessions[i].speakerImage),
               ),
             ),
             title: RichText(
               text: TextSpan(
-                text: "${sessions[i].sessionTitle}\n",
+                text: "${allSessions[i].sessionTitle}\n",
                 style: Theme.of(context).textTheme.title.copyWith(fontSize: 16),
                 children: [
                   TextSpan(
-                      text: sessions[i].speakerName,
+                      text: allSessions[i].speakerName,
                       style: Theme.of(context).textTheme.subtitle.copyWith(
                             fontSize: 14,
                             color: Tools.multiColors[Random().nextInt(4)],
@@ -71,7 +74,7 @@ class SessionList extends StatelessWidget {
               ),
             ),
             subtitle: Text(
-              sessions[i].speakerDesc,
+              allSessions[i].speakerDesc,
               style: Theme.of(context).textTheme.caption.copyWith(
                     fontSize: 10.0,
                   ),

@@ -96,6 +96,7 @@ If you try to build the project straight away, you'll get an error complaining t
                     “https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4”,
                 speakerName: “Max Saltonstall”,
                 speakerDesc: “Cloud Developer Advocate, Google DevByte speaker”,
+                track: "cloud" 
             ),
         ]
     ```

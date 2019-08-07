@@ -13,15 +13,7 @@ class SessionDetail extends StatelessWidget {
   static const String routeName = "/session_detail";
   final Session session;
 
-  SessionDetail({Key key, this.session}) : super(key: key);
-
-  final desc = "The async/await feature allows you to write the asynchronous code in a straightforward way," +
-      "without a long list of callbacks. Used in C# for quite a while already, it has proven to be extremely useful.In Kotlin you have async and await as library functions implemented using coroutines." +
-      "A coroutine is a light-weight thread that can be suspended and resumed later." +
-      "Very precise definition, but might be confusing at first. What 'light-weight thread' means?" +
-      "How does suspension work? This talk uncovers the magic. We'll discuss the concept of coroutines," +
-      "the power of async/await, and how you can benefit from defining your asynchronous computations using suspend function." +
-      " The content of this video was not produced or created by Google.";
+  SessionDetail({Key key, @required this.session}) : super(key: key);
 
   Widget socialActions(context) => FittedBox(
         child: Row(
@@ -114,7 +106,7 @@ class SessionDetail extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                desc,
+                session.sessionDesc,
                 textAlign: TextAlign.center,
                 style:
                     Theme.of(context).textTheme.caption.copyWith(fontSize: 13),

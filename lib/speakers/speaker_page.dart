@@ -125,7 +125,7 @@ class SpeakerPage extends StatelessWidget {
                             speakers[i].speakerSession,
                             style: Theme.of(context).textTheme.caption,
                           ),
-                          socialActions(context, speakers[0]),
+                          socialActions(context, speakers[i]),
                         ],
                       ),
                     )
