@@ -74,4 +74,9 @@ class Devfest {
   static const String photoPref = "photoPref";
   static const String isAdminPref = "isAdminPref";
   static const String darkModePref = "darkModePref";
+
+  //* JSON URLS
+  static const String speakersAssetJson = "assets/json/speakers.json";
+  static const String sessionsAssetJson = "assets/json/sessions.json";
+  static const String teamsAssetJson = "assets/json/teams.json";
 }

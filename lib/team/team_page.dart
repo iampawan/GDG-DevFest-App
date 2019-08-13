@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_devfest/home/index.dart';
 import 'package:flutter_devfest/home/speaker.dart';
-import 'package:flutter_devfest/home/team.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -58,7 +58,9 @@ class TeamPage extends StatelessWidget {
       );
   @override
   Widget build(BuildContext context) {
-    // var _homeBloc = HomeBloc();
+    var _homeBloc = HomeBloc();
+    var state = _homeBloc.currentState as InHomeState;
+    var teams = state.teamsData.teams;
     return DevScaffold(
       body: ListView.builder(
         shrinkWrap: true,

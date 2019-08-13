@@ -29,7 +29,8 @@ Future<void> main() async {
   BlocSupervisor.delegate = SimpleBlocDelegate();
 
   // * Set flavor for your app. For eg - MOCK for offline, REST for some random server calls to your backend, FIREBASE for firebase calls
-  Injector.configure(Flavor.MOCK);
+  //* Set DataMode.DART to use Dart hardcoded data and DataMode.JSON to use json file for hardcoded data.
+  Injector.configure(Flavor.MOCK, DataMode.JSON);
 
   runApp(ConfigPage());
 }

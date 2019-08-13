@@ -1,3 +1,26 @@
+class TeamsData {
+  List<Team> teams;
+
+  TeamsData({this.teams});
+
+  TeamsData.fromJson(Map<String, dynamic> json) {
+    if (json['teams'] != null) {
+      teams = new List<Team>();
+      json['teams'].forEach((v) {
+        teams.add(Team.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.teams != null) {
+      data['teams'] = this.teams.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
 class Team {
   String name;
   String desc;

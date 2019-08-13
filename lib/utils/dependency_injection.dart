@@ -2,13 +2,17 @@ import 'package:flutter_devfest/network/index.dart';
 
 enum Flavor { MOCK, REST, FIREBASE }
 
+enum DataMode { DART, JSON }
+
 //DI
 class Injector {
   static final Injector _singleton = new Injector._internal();
   static Flavor _flavor;
+  static DataMode _dataMode;
 
-  static void configure(Flavor flavor) {
+  static void configure(Flavor flavor, DataMode dataMode) {
     _flavor = flavor;
+    _dataMode = dataMode;
   }
 
   factory Injector() {
@@ -26,6 +30,17 @@ class Injector {
         return FirebaseClient();
       default:
         return RestClient();
+    }
+  }
+
+  DataMode get currentDataMode {
+    switch (_dataMode) {
+      case DataMode.DART:
+        return DataMode.DART;
+      case DataMode.JSON:
+        return DataMode.JSON;
+      default:
+        return DataMode.DART;
     }
   }
 }

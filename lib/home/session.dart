@@ -1,3 +1,26 @@
+class SessionsData {
+  List<Session> sessions;
+
+  SessionsData({this.sessions});
+
+  SessionsData.fromJson(Map<String, dynamic> json) {
+    if (json['sessions'] != null) {
+      sessions = new List<Session>();
+      json['sessions'].forEach((v) {
+        sessions.add(Session.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.sessions != null) {
+      data['sessions'] = this.sessions.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
 class Session {
   String sessionId;
   String sessionTitle;
