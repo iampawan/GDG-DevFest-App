@@ -13,5 +13,23 @@ void main() {
         expect(res.networkServiceResponse.success, isTrue);
       },
     );
+    test(
+      "Should Fetch Session List",
+          () async {
+        IClient _client = MockClient();
+        final res = await _client.getAsync(HomeProvider.kConstGetSessionsUrl);
+        print(res.mappedResult);
+        expect(res.networkServiceResponse.success, isTrue);
+      },
+    );
+    test(
+      "Should Fetch Team List",
+          () async {
+        IClient _client = MockClient();
+        final res = await _client.getAsync(HomeProvider.kConstGetTeamsUrl);
+        print(res.mappedResult);
+        expect(res.networkServiceResponse.success, isTrue);
+      },
+    );
   });
 }
