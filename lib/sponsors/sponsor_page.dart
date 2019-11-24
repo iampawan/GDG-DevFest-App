@@ -13,27 +13,13 @@ class SponsorPage extends StatelessWidget {
         children: <Widget>[
           SponsorImage(
             imgUrl: "https://devfest.gdgkolkata.org/assets/img/logos/gd.png",
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          SponsorImage(
-            imgUrl: "https://devfest.gdgkolkata.org/assets/img/jetbrains.png",
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          SponsorImage(
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin-logo.svg/220px-Kotlin-logo.svg.png",
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          SponsorImage(
-            imgUrl:
-                "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_0016c93c710cf35990b999cba3a59bae/firebase.png",
           )
+//          SizedBox(
+//            height: 30,
+//          ),
+//          SponsorImage(
+//            imgUrl: "https://devfest.gdgkolkata.org/assets/img/jetbrains.png",
+//          )
         ],
       ),
       title: "Sponsors",
