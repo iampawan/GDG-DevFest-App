@@ -100,13 +100,6 @@ class HomeFront extends StatelessWidget {
             onPressed: () => Navigator.pushNamed(context, AgendaPage.routeName),
           ),
           ActionCard(
-            icon: Icons.person,
-            color: Colors.green,
-            title: Devfest.speakers_text,
-            onPressed: () =>
-                Navigator.pushNamed(context, SpeakerPage.routeName),
-          ),
-          ActionCard(
             icon: Icons.people,
             color: Colors.amber,
             title: Devfest.team_text,
