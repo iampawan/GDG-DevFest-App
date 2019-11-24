@@ -12,7 +12,7 @@ class SponsorPage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           SponsorImage(
-            imgUrl: "https://devfest.gdgkolkata.org/assets/img/logos/gd.png",
+            imgUrl: "https://lh3.googleusercontent.com/NGPrjka2ai0w7sfhxkxCwtOSh2wVyEZMdtrVxI4vrA22ebA_fcyl9PSvhTaCYXSWh0A68ZhvXhVZ4U-Nnp3v9IfoXg5o5H1tjjK97cs",
           )
 //          SizedBox(
 //            height: 30,
