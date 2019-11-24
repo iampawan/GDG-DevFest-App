@@ -96,15 +96,15 @@ class HomeFront extends StatelessWidget {
                 await _launchURL("https://www.meetup.com/GDGYerevan");
               },
             ),
-//            IconButton(
-//              icon: Icon(FontAwesomeIcons.envelope),
-//              onPressed: () async {
-//                var emailUrl =
-//                    '''mailto:mtechviral@gmail.com?subject=Support Needed For DevFest App&body={Name: Pawan Kumar},Email: pawan221b@gmail.com}''';
-//                var out = Uri.encodeFull(emailUrl);
-//                await _launchURL(out);
-//              },
-//            ),
+            IconButton(
+              icon: Icon(FontAwesomeIcons.envelope),
+              onPressed: () async {
+                var emailUrl =
+                    '''mailto:gdg.yerevan@gmail.com?subject=Support Request''';
+                var out = Uri.encodeFull(emailUrl);
+                await _launchURL(out);
+              },
+            ),
           ],
         ),
       );
