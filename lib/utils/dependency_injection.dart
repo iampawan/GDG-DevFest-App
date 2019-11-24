@@ -29,7 +29,7 @@ class Injector {
         //* Yet to add
         return FirebaseClient();
       default:
-        return RestClient();
+        return MockClient();
     }
   }
 
@@ -40,7 +40,7 @@ class Injector {
       case DataMode.JSON:
         return DataMode.JSON;
       default:
-        return DataMode.DART;
+        return DataMode.JSON;
     }
   }
 }
