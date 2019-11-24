@@ -120,12 +120,6 @@ class HomeFront extends StatelessWidget {
                 Navigator.pushNamed(context, SponsorPage.routeName),
           ),
           ActionCard(
-            icon: Icons.question_answer,
-            color: Colors.brown,
-            title: Devfest.faq_text,
-            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
-          ),
-          ActionCard(
             icon: Icons.map,
             color: Colors.blue,
             title: Devfest.map_text,
