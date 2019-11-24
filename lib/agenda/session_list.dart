@@ -35,14 +35,14 @@ class SessionList extends StatelessWidget {
             trailing: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: "${allSessions[i].sessionTotalTime}\n",
+                text: "${allSessions[i].sessionStartTime}\n",
                 style: Theme.of(context)
                     .textTheme
                     .title
                     .copyWith(fontSize: 14, fontWeight: FontWeight.bold),
                 children: [
                   TextSpan(
-                    text: allSessions[i].sessionStartTime,
+                    text: allSessions[i].sessionTotalTime,
                     style: Theme.of(context).textTheme.subtitle.copyWith(
                           fontSize: 12,
                         ),
