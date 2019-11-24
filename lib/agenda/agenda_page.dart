@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_devfest/agenda/all_screen.dart';
 import 'package:flutter_devfest/agenda/cloud_screen.dart';
 import 'package:flutter_devfest/agenda/mobile_screen.dart';
 import 'package:flutter_devfest/agenda/web_screen.dart';
@@ -16,7 +17,7 @@ class AgendaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var _homeBloc = HomeBloc();
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: DevScaffold(
         title: "Agenda",
         tabBar: TabBar(
@@ -28,9 +29,9 @@ class AgendaPage extends StatelessWidget {
           isScrollable: false,
           tabs: <Widget>[
             Tab(
-              child: Text("Cloud"),
+              child: Text("All"),
               icon: Icon(
-                FontAwesomeIcons.cloud,
+                FontAwesomeIcons.google,
                 size: 12,
               ),
             ),
@@ -38,6 +39,13 @@ class AgendaPage extends StatelessWidget {
               child: Text("Mobile"),
               icon: Icon(
                 FontAwesomeIcons.mobile,
+                size: 12,
+              ),
+            ),
+            Tab(
+              child: Text("Cloud"),
+              icon: Icon(
+                FontAwesomeIcons.cloud,
                 size: 12,
               ),
             ),
@@ -52,10 +60,13 @@ class AgendaPage extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            CloudScreen(
+            AllScreen(
               homeBloc: _homeBloc,
             ),
             MobileScreen(
+              homeBloc: _homeBloc,
+            ),
+            CloudScreen(
               homeBloc: _homeBloc,
             ),
             WebScreen(

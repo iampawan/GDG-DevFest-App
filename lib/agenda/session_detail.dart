@@ -71,7 +71,7 @@ class SessionDetail extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: Hero(
-                  tag: session.speakerImage,
+                  tag: session.sessionId,
                   child: CircleAvatar(
                     radius: 100.0,
                     backgroundImage: CachedNetworkImageProvider(
@@ -114,7 +114,7 @@ class SessionDetail extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              socialActions(context),
+//              socialActions(context),
             ],
           ),
         ),
