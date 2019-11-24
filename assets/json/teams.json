@@ -1,34 +1,30 @@
 {
   "teams": [
     {
-      "name": "Sundar Pichai",
+      "name": "Vardan Papikyan",
       "desc": "Organizer",
-      "contribution": "Google CEO",
-      "image": "https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_400x400.jpg"
-    },
-    {
-      "name": "Vrijraj",
-      "desc": "Co-Organizer",
-      "contribution": "Logistics and travels",
-      "image": "https://avatars2.githubusercontent.com/u/10599101?s=460&v=4"
-    },
-    {
-      "name": "Larry Page",
-      "desc": "Co-Organizer",
+      "fb_url": "https://www.facebook.com/vardan.papikyan",
+      "twitter_url": "https://twitter.com/vardanpapikyan",
+      "linkedin_url": "https://www.linkedin.com/in/vardanpapikyan",
       "contribution": "Founder",
-      "image": "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5c76bcaaa7ea43100043c836%2F400x400.jpg%3Ffit%3Dscale%26background%3D000000"
+      "image": "https://scontent.fevn1-4.fna.fbcdn.net/v/t1.0-9/p960x960/60346696_2338584716206076_7529139929733922816_o.jpg?_nc_cat=101&_nc_oc=AQnu5OtQtYXSMxjcG1L8y4sD-ibDBHlCtDdUArweVI6wd1AsRqy0Dh-5vigxKhRCrHg&_nc_ht=scontent.fevn1-4.fna&oh=904691a59d3333af5ee3d4823eadba3a&oe=5E480B29"
     },
     {
-      "name": "Pawan Kumar",
+      "name": "Roland Yeghiazaryan",
       "desc": "Co-Organizer",
-      "contribution": "Developed the app",
-      "image": "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4"
+      "fb_url": "https://www.facebook.com/roland.yeghiazaryan",
+      "twitter_url": "https://twitter.com/RolandYeghiazar",
+      "linkedin_url": "https://www.linkedin.com/in/roland-yeghiazaryan",
+      "contribution": "Tech Lead",
+      "image": "https://scontent.fevn1-2.fna.fbcdn.net/v/t1.0-9/s960x960/71185800_2438952392825547_2932665134985773056_o.jpg?_nc_cat=100&_nc_oc=AQmxXqTXBMYnqKPsskLa3CEzGs9MjQENCrqivrG91Fv7PQxr71UHnOcOZspt8OHf_6w&_nc_ht=scontent.fevn1-2.fna&oh=62291113af78addde7e95012f50b6c5f&oe=5E8971CB"
     },
     {
-      "name": "Pawan Kumar",
-      "desc": "Organizer",
-      "contribution": "Developed the app",
-      "image": "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4"
+      "name": "Anahit Gharibyan",
+      "desc": "Co-Organizer",
+      "fb_url": "https://www.facebook.com/anahit.annie.gharibyan",
+      "linkedin_url": "https://www.linkedin.com/in/anahit-gharibyan-2b1153144",
+      "contribution": "PR / Marketing",
+      "image": "https://scontent-sof1-1.xx.fbcdn.net/v/t31.0-8/p960x960/28828498_954388058069096_4407791737910387741_o.jpg?_nc_cat=110&_nc_oc=AQkZyFIMIy_xkLy1ToBFD15ISJ9vsb1Cuco27QnTun3fhLg4tSqSIV8I-WqyQwibiCU&_nc_ht=scontent-sof1-1.xx&oh=05cb6b6dcd9b39e0a465cde357f73ffc&oe=5E5C3A2E"
     }
   ]
 }
