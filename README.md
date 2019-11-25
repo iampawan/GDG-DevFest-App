@@ -1,4 +1,4 @@
-# GDG DEVFEST APP [![Codemagic build status](https://api.codemagic.io/apps/5ddc4a56156abe001ac4ac02/5ddc4a56156abe001ac4ac01/status_badge.svg)]
+# GDG DEVFEST APP [![Codemagic build status](https://api.codemagic.io/apps/5ddc4a56156abe001ac4ac02/5ddc4a56156abe001ac4ac01/status_badge.svg)](https://codemagic.io/apps/5ddc4a56156abe001ac4ac02/5ddc4a56156abe001ac4ac01/latest_build)
 
 <p align="center">
 <img width="800px"  src="https://i.imgur.com/P21Hk0u.png">
