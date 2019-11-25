@@ -24,13 +24,13 @@ if (flutterVersionName == null) {
 apply plugin: 'com.android.application'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
-//   def keystoreProperties = new Properties()
-//   def keystorePropertiesFile = rootProject.file('key.properties')
-//   if (keystorePropertiesFile.exists()) {
-//       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-//   }
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
 
-   android {
+android {
     compileSdkVersion 28
 
     lintOptions {
@@ -47,24 +47,25 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 //        testInstrumentatioloadnRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-      signingConfigs {
-//       release {
-//           keyAlias keystoreProperties['keyAlias']
-//           keyPassword keystoreProperties['keyPassword']
-//           storeFile file(keystoreProperties['storeFile'])
-//           storePassword keystoreProperties['storePassword']
-//       }
-   }
-   buildTypes {
-//       release {
-//          signingConfig signingConfigs.release
-//
-//            minifyEnabled true
-//            useProguard true
-//
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-//       }
-   }
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    buildTypes {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                signingConfig signingConfigs.release
+                println "Signing with key.properties"
+            } else {
+                signingConfig signingConfigs.debug
+                println "Signing with debug keys"
+            }
+        }
+    }
 }
 
 flutter {
