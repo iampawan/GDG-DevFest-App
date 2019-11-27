@@ -35,6 +35,8 @@ class Devfest {
   static const String home_img = "assets/images/home_img.jpeg";
   static const String banner_light = "assets/images/banner_light.png";
   static const String banner_dark = "assets/images/banner_dark.png";
+  static const String sponsor_rockbite_games = "assets/images/sponsor_rockbite_games.png";
+  static const String sponsor_google = "assets/images/sponsor_google.png";
 
   //*  Texts
   static const String welcomeText = "Welcome to GDG DevFest Yerevan";

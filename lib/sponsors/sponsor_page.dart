@@ -1,7 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/home/home_widgets/home_front.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
+import 'package:flutter_devfest/utils/devfest.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,25 +15,24 @@ class SponsorPage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           SponsorImage(
-            imgUrl: "https://lh3.googleusercontent.com/NGPrjka2ai0w7sfhxkxCwtOSh2wVyEZMdtrVxI4vrA22ebA_fcyl9PSvhTaCYXSWh0A68ZhvXhVZ4U-Nnp3v9IfoXg5o5H1tjjK97cs",
+            img: Devfest.sponsor_google,
+            websiteUrl: "http://google.com",
+          ),
+          SponsorImage(
+            img: Devfest.sponsor_rockbite_games,
+            websiteUrl: "http://rockbitegames.com",
           ),
           ActionCard(
-            icon: FontAwesomeIcons.handshake,
+            icon: FontAwesomeIcons.dollarSign,
             color: Colors.purple,
             title: "Become a sponsor for 2020 GDG events",
             onPressed: () async {
               var emailUrl =
-              '''mailto:gdg.yerevan@gmail.com?subject=Request for Sponsorship 2020''';
+                  '''mailto:gdg.yerevan@gmail.com?subject=Request for Sponsorship 2020''';
               var out = Uri.encodeFull(emailUrl);
               await _launchURL(out);
             },
           ),
-//          SizedBox(
-//            height: 30,
-//          ),
-//          SponsorImage(
-//            imgUrl: "https://devfest.gdgkolkata.org/assets/img/jetbrains.png",
-//          )
         ],
       ),
       title: "Sponsors",
@@ -50,20 +49,23 @@ _launchURL(String url) async {
 }
 
 class SponsorImage extends StatelessWidget {
-  final String imgUrl;
+  final String img;
+  final String websiteUrl;
 
-  const SponsorImage({Key key, this.imgUrl}) : super(key: key);
+  const SponsorImage({Key key, this.img, this.websiteUrl}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 0.0,
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: CachedNetworkImage(
-          imageUrl: imgUrl,
-          height: 200.0,
-          width: 200.0,
-          fit: BoxFit.contain,
+    return InkWell(
+      onTap: () {
+        _launchURL(websiteUrl);
+      },
+      child: Card(
+        elevation: 0.0,
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Image.asset(img,
+              height: 200.0, width: 200.0, fit: BoxFit.contain),
         ),
       ),
     );
