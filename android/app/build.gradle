@@ -24,10 +24,12 @@ if (flutterVersionName == null) {
 apply plugin: 'com.android.application'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
+apply plugin: 'com.google.gms.google-services'
+
    def keystoreProperties = new Properties()
    def keystorePropertiesFile = rootProject.file('key.properties')
    if (keystorePropertiesFile.exists()) {
-    //    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
    }
 
    android {
@@ -78,4 +80,3 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:17.2.0'
 }
 
-apply plugin: 'com.google.gms.google-services'

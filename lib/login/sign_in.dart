@@ -14,7 +14,7 @@ Future<String> signInWithGoogle() async {
     idToken: googleSignInAuthentication.idToken,
   );
 
-  final AuthResult authResult = await _auth.signInWithCredential(credential);
+  final  AuthResult authResult = await _auth.signInWithCredential(credential);
   final FirebaseUser user = authResult.user;
 
   // final FirebaseUser user = (await _auth.signInWithCredential(credential));
