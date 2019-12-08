@@ -19,15 +19,7 @@ class SessionDetail extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.facebookF,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(speakers[0].fbUrl);
-              },
-            ),
+            
             IconButton(
               icon: Icon(
                 FontAwesomeIcons.twitter,

@@ -57,28 +57,6 @@ class HomeFront extends StatelessWidget {
                 Navigator.pushNamed(context, SpeakerPage.routeName),
           ),
           RaisedButton(
-            child: Text("Sponsors"),
-            shape: StadiumBorder(),
-            color: Colors.orange,
-            colorBrightness: Brightness.dark,
-            onPressed: () =>
-                Navigator.pushNamed(context, SponsorPage.routeName),
-          ),
-          RaisedButton(
-            child: Text("Team"),
-            shape: StadiumBorder(),
-            color: Colors.purple,
-            colorBrightness: Brightness.dark,
-            onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
-          ),
-          RaisedButton(
-            child: Text("FAQ"),
-            shape: StadiumBorder(),
-            color: Colors.brown,
-            colorBrightness: Brightness.dark,
-            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
-          ),
-          RaisedButton(
             child: Text("Locate Us"),
             shape: StadiumBorder(),
             color: Colors.blue,
@@ -107,25 +85,6 @@ class HomeFront extends StatelessWidget {
                 Navigator.pushNamed(context, SpeakerPage.routeName),
           ),
           ActionCard(
-            icon: Icons.people,
-            color: Colors.amber,
-            title: Devfest.team_text,
-            onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
-          ),
-          ActionCard(
-            icon: Icons.attach_money,
-            color: Colors.purple,
-            title: Devfest.sponsor_text,
-            onPressed: () =>
-                Navigator.pushNamed(context, SponsorPage.routeName),
-          ),
-          ActionCard(
-            icon: Icons.question_answer,
-            color: Colors.brown,
-            title: Devfest.faq_text,
-            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
-          ),
-          ActionCard(
             icon: Icons.map,
             color: Colors.blue,
             title: Devfest.map_text,
@@ -145,36 +104,9 @@ class HomeFront extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: Icon(FontAwesomeIcons.twitter),
-              onPressed: () async {
-                await _launchURL("https://twitter.com/imthepk");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.linkedinIn),
-              onPressed: () async {
-                _launchURL("https://linkedin.com/in/imthepk");
-              },
-            ),
-            IconButton(
               icon: Icon(FontAwesomeIcons.youtube),
               onPressed: () async {
-                await _launchURL("https://youtube.com/mtechviral");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.meetup),
-              onPressed: () async {
-                await _launchURL("https://meetup.com/");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.envelope),
-              onPressed: () async {
-                var emailUrl =
-                    '''mailto:mtechviral@gmail.com?subject=Support Needed For DevFest App&body={Name: Pawan Kumar},Email: pawan221b@gmail.com}''';
-                var out = Uri.encodeFull(emailUrl);
-                await _launchURL(out);
+                await _launchURL("https://youtu.be/hTJ_-MxHKMY");
               },
             ),
           ],
