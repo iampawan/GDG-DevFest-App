@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "36457823190-o9hdffs133gu1lt53tck8rcpvg10jso9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mtechviral.devfest",
+            "certificate_hash": "a8224a149b4004f27b068f8bf9b7367a35606701"
+          }
+        },
+        {
           "client_id": "36457823190-uoeoup29s4dfm3ciiv66d5mareq4sme2.apps.googleusercontent.com",
           "client_type": 3
         }
