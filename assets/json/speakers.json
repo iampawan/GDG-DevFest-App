@@ -10,6 +10,39 @@
       "github_url":"https://github.com/Kelebra28",
       "twitter_url":"https://twitter.com",
       "linkedin_url":"https://linkedin.com"
+    },
+    {
+      "id":"2",
+      "first_name":"Enrique Diaz",
+      "last_name":"Diaz",
+      "url_photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTwQa8ihBRX_FbetjnAjxqPHXdgdXBir1YDF61pfH2VvFvfvBf",
+      "job":"Developer",
+      "tags":"Emprendimieto, Android",
+      "github_url":"https://github.com/Kelebra28",
+      "twitter_url":"https://twitter.com",
+      "linkedin_url":"https://linkedin.com"
+    },
+    {
+      "id":"3",
+      "first_name":"Edwino",
+      "last_name":"Basurto",
+      "url_photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTwQa8ihBRX_FbetjnAjxqPHXdgdXBir1YDF61pfH2VvFvfvBf",
+      "job":"Developer",
+      "tags":"Emprendimieto, Android",
+      "github_url":"https://github.com/Kelebra28",
+      "twitter_url":"https://twitter.com",
+      "linkedin_url":"https://linkedin.com"
+    },
+    {
+      "id":"4",
+      "first_name":"Raul",
+      "last_name":"Basurto",
+      "url_photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTwQa8ihBRX_FbetjnAjxqPHXdgdXBir1YDF61pfH2VvFvfvBf",
+      "job":"Developer",
+      "tags":"Emprendimieto, Android",
+      "github_url":"https://github.com/Kelebra28",
+      "twitter_url":"https://twitter.com",
+      "linkedin_url":"https://linkedin.com"
     }
   ]
 }
