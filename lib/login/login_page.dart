@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_devfest/home/index.dart';
 import './sign_in.dart';
 
@@ -18,7 +19,15 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlutterLogo(size: 150),
+              // FlutterLogo(size: 150),
+              Container(
+                padding: EdgeInsets.all(5.0),
+                child: CircleAvatar(
+                  backgroundImage: NetworkImage('https://secure.meetupstatic.com/photos/event/1/2/d/1/600_486364817.jpeg'),
+                  radius: 160.0,
+                ),
+              ),
+              
               SizedBox(height: 50),
               _signInButton(),
             ],
