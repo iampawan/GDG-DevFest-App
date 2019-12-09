@@ -18,15 +18,7 @@ class SpeakerPage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.facebookF,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(speaker.fbUrl);
-              },
-            ),
+            
             IconButton(
               icon: Icon(
                 FontAwesomeIcons.twitter,
@@ -80,7 +72,7 @@ class SpeakerPage extends StatelessWidget {
                       ),
                       child: CachedNetworkImage(
                         fit: BoxFit.cover,
-                        imageUrl: speakers[i].speakerImage,
+                        imageUrl: speakers[i].urlPhoto,
                       ),
                     ),
                     SizedBox(
@@ -97,7 +89,7 @@ class SpeakerPage extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
                               Text(
-                                speakers[i].speakerName,
+                                speakers[i].firstName,
                                 style: Theme.of(context).textTheme.title,
                               ),
                               SizedBox(
@@ -115,14 +107,14 @@ class SpeakerPage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            speakers[i].speakerDesc,
+                            speakers[i].job,
                             style: Theme.of(context).textTheme.subtitle,
                           ),
                           SizedBox(
                             height: 10,
                           ),
                           Text(
-                            speakers[i].speakerSession,
+                            speakers[i].tags,
                             style: Theme.of(context).textTheme.caption,
                           ),
                           socialActions(context, speakers[i]),
