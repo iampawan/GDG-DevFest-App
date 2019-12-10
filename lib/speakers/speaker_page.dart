@@ -107,15 +107,11 @@ class SpeakerPage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            speakers[i].job,
+                            speakers[i].tags,
                             style: Theme.of(context).textTheme.subtitle,
                           ),
                           SizedBox(
                             height: 10,
-                          ),
-                          Text(
-                            speakers[i].tags,
-                            style: Theme.of(context).textTheme.caption,
                           ),
                           socialActions(context, speakers[i]),
                         ],
