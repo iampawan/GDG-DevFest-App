@@ -6,16 +6,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_devfest/home/home_bloc.dart';
 import 'package:flutter_devfest/home/index.dart';
 import 'package:flutter_devfest/home/speaker.dart';
+import 'package:flutter_devfest/speakers/speaker_detail.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+
+import 'package:flutter_devfest/agenda/session_detail.dart';
+import 'package:flutter_devfest/home/session.dart';
+
+
 class SpeakerPage extends StatelessWidget {
+  final List<Speaker> allSpeaker;
   static const String routeName = "/speakers";
 
+  const SpeakerPage({Key key, this.allSpeaker}) : super(key: key);
+
   Widget socialActions(context, Speaker speaker) => FittedBox(
+    child: GestureDetector(
         child: Row(
+          
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             
@@ -48,6 +59,7 @@ class SpeakerPage extends StatelessWidget {
             ),
           ],
         ),
+        ),
       );
   @override
   Widget build(BuildContext context) {
@@ -61,64 +73,80 @@ class SpeakerPage extends StatelessWidget {
           return Card(
             elevation: 0.0,
             child: Padding(
+             
                 padding: const EdgeInsets.all(12.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    ConstrainedBox(
-                      constraints: BoxConstraints.expand(
-                        height: MediaQuery.of(context).size.height * 0.2,
-                        width: MediaQuery.of(context).size.width * 0.3,
+                child:GestureDetector(
+                  child: Row(                 
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      ConstrainedBox(
+                        constraints: BoxConstraints.expand(
+                          height: MediaQuery.of(context).size.height * 0.2,
+                          width: MediaQuery.of(context).size.width * 0.3,
+                        ),
+                        child: CachedNetworkImage(
+                          fit: BoxFit.cover,
+                          imageUrl: speakers[i].urlPhoto,
+                        ),
                       ),
-                      child: CachedNetworkImage(
-                        fit: BoxFit.cover,
-                        imageUrl: speakers[i].urlPhoto,
+                      SizedBox(
+                        width: 20,
                       ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              Text(
-                                speakers[i].firstName,
-                                style: Theme.of(context).textTheme.title,
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              AnimatedContainer(
-                                duration: Duration(seconds: 1),
-                                width: MediaQuery.of(context).size.width * 0.2,
-                                height: 5,
-                                color: Tools.multiColors[Random().nextInt(4)],
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            speakers[i].tags,
-                            style: Theme.of(context).textTheme.subtitle,
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          socialActions(context, speakers[i]),
-                        ],
-                      ),
-                    )
-                  ],
-                )),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Text(
+                                  speakers[i].firstName,
+                                  style: Theme.of(context).textTheme.title,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                AnimatedContainer(
+                                  duration: Duration(seconds: 1),
+                                  width: MediaQuery.of(context).size.width * 0.2,
+                                  height: 5,
+                                  color: Tools.multiColors[Random().nextInt(4)],
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              speakers[i].tags,
+                              style: Theme.of(context).textTheme.subtitle,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            socialActions(context, speakers[i]),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  onTap: (){
+                    print("le diste clcik al usuario");
+                     Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SpeackerDetail(
+                    speaker: allSpeaker,
+                  ) 
+                  // SessionDetail(),
+                ),
+              );
+                  },
+                ),
+            ),
           );
         },
         itemCount: speakers.length,

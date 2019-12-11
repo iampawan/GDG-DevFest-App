@@ -20,16 +20,17 @@ class SessionList extends StatelessWidget {
         return Card(
           elevation: 0.0,
           child: ListTile(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => SessionDetail(
-                    session: allSessions[i],
-                  ),
-                ),
-              );
-            },
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //       builder: (context) => SessionDetail(
+            //         session: allSessions[i],
+            //       ),
+            //     ),
+            //   );
+
+            // },
             // dense: true,
             isThreeLine: true,
             trailing: RichText(
