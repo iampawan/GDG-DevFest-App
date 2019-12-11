@@ -13,9 +13,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
-import 'package:flutter_devfest/agenda/session_detail.dart';
-import 'package:flutter_devfest/home/session.dart';
-
 
 class SpeakerPage extends StatelessWidget {
   final List<Speaker> allSpeaker;
@@ -138,7 +135,7 @@ class SpeakerPage extends StatelessWidget {
                      Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SpeackerDetail(
+                  builder: (context) => SpeakerDetail(
                     speaker: allSpeaker,
                   ) 
                   // SessionDetail(),

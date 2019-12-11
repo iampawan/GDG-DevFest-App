@@ -2,19 +2,16 @@ import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_devfest/home/session.dart';
 import 'package:flutter_devfest/home/speaker.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 
-class SpeackerDetail extends StatelessWidget {
+class SpeakerDetail extends StatelessWidget {
   static const String routeName = "speaker_detil";
   final Speaker speaker;
 
-  const SpeackerDetail({Key key, this.speaker}) : super(key: key);
+  const SpeakerDetail({Key key, this.speaker}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
