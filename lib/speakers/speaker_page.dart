@@ -18,46 +18,8 @@ class SpeakerPage extends StatelessWidget {
   final List<Speaker> allSpeaker;
   static const String routeName = "/speakers";
 
-  const SpeakerPage({Key key, this.allSpeaker}) : super(key: key);
+  const SpeakerPage({Key key, @required this.allSpeaker}) : super(key: key);
 
-  Widget socialActions(context, Speaker speaker) => FittedBox(
-    child: GestureDetector(
-        child: Row(
-          
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.twitter,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(speaker.twitterUrl);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.linkedinIn,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(speaker.linkedinUrl);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.github,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(speaker.githubUrl);
-              },
-            ),
-          ],
-        ),
-        ),
-      );
   @override
   Widget build(BuildContext context) {
     var _homeBloc = HomeBloc();
@@ -100,7 +62,7 @@ class SpeakerPage extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
                                 Text(
-                                  speakers[i].firstName,
+                                  speakers[i].firstName + " " + speakers[i].lastName,
                                   style: Theme.of(context).textTheme.title,
                                 ),
                                 SizedBox(
@@ -124,19 +86,17 @@ class SpeakerPage extends StatelessWidget {
                             SizedBox(
                               height: 10,
                             ),
-                            socialActions(context, speakers[i]),
                           ],
                         ),
                       )
                     ],
                   ),
                   onTap: (){
-                    print("le diste clcik al usuario");
                      Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => SpeakerDetail(
-                    speaker: allSpeaker[i],
+                    speaker: speakers[i],
                   ) 
                   // SessionDetail(),
                 ),

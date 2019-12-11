@@ -11,7 +11,7 @@ class SpeakerDetail extends StatelessWidget {
   static const String routeName = "speaker_detil";
   final Speaker speaker;
 
-  const SpeakerDetail({Key key, this.speaker}) : super(key: key);
+  const SpeakerDetail({Key key,@required this.speaker}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class SpeakerDetail extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                "${speaker.job}",
+                "${speaker.tags}",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.title.copyWith(
                       fontSize: 14,
