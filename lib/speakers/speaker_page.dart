@@ -136,7 +136,7 @@ class SpeakerPage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => SpeakerDetail(
-                    speaker: allSpeaker,
+                    speaker: allSpeaker[i],
                   ) 
                   // SessionDetail(),
                 ),
