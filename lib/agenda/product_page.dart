@@ -10,7 +10,7 @@ class ProductScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var state = homeBloc.currentState as InHomeState;
     var sessions = state.sessionsData.sessions;
-    var mobileSessions = sessions.where((s) => s.track == "mobile").toList();
+    var mobileSessions = sessions.where((s) => s.track == "product").toList();
     return SessionList(
       allSessions: mobileSessions,
     );

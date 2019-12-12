@@ -27,7 +27,7 @@ class Session {
   String sessionDesc;
   String sessionImage;
   String sessionStartTime;
-  String sessionTotalTime;
+  String sessionPlace;
   String sessionLink;
   String speakerName;
   String speakerDesc;
@@ -42,7 +42,7 @@ class Session {
     this.sessionDesc,
     this.sessionImage,
     this.sessionStartTime,
-    this.sessionTotalTime,
+    this.sessionPlace,
     this.sessionLink,
     this.speakerName,
     this.speakerDesc,
@@ -58,7 +58,7 @@ class Session {
     sessionDesc = json['session_desc'];
     sessionImage = json['session_image'];
     sessionStartTime = json['session_start_time'];
-    sessionTotalTime = json['session_total_time'];
+    sessionPlace = json['place'];
     sessionLink = json['session_link'];
     speakerName = json['speaker_name'];
     speakerDesc = json['speaker_desc'];
@@ -75,7 +75,7 @@ class Session {
     data['session_desc'] = this.sessionDesc;
     data['session_image'] = this.sessionImage;
     data['session_start_time'] = this.sessionStartTime;
-    data['session_total_time'] = this.sessionTotalTime;
+    data['place'] = this.sessionPlace;
     data['session_link'] = this.sessionLink;
     data['speaker_name'] = this.speakerName;
     data['speaker_desc'] = this.speakerDesc;
@@ -92,7 +92,7 @@ List<Session> sessions = [
   Session(
     sessionId: "",
     sessionStartTime: "",
-    sessionTotalTime: "",
+    sessionPlace: "",
     sessionTitle: "",
     sessionDesc: "",
     speakerImage:"",

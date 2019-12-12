@@ -10,7 +10,7 @@ class DiversidadScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var state = homeBloc.currentState as InHomeState;
     var sessions = state.sessionsData.sessions;
-    var cloudSessions = sessions.where((s) => s.track == "cloud").toList();
+    var cloudSessions = sessions.where((s) => s.track == "diversidad").toList();
     return SessionList(
       allSessions: cloudSessions,
     );

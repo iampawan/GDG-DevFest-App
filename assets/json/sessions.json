@@ -3,24 +3,24 @@
     {
       "session_id": "1",
       "session_start_time": "9:00 AM",
-      "session_total_time": "30 Mins",
-      "session_title": "DevByte: From Zero to ML on Google Cloud Platform",
-      "session_desc": "The async/await feature allows you to write the asynchronous code in a straightforward way without a long list of callbacks. Used in C# for quite a while already, it has proven to be extremely useful.In Kotlin you have async and await as library functions implemented using coroutines. A coroutine is a light-weight thread that can be suspended and resumed later. Very precise definition, but might be confusing at first. What 'light-weight thread' means? How does suspension work? This talk uncovers the magic. We'll discuss the concept of coroutines, the power of async/await, and how you can benefit from defining your asynchronous computations using suspend function. The content of this video was not produced or created by Google.",
-      "speaker_image": "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
-      "speaker_name": "Max Saltonstall",
-      "speaker_desc": "Cloud Developer Advocate, Google DevByte speaker",
-      "track": "cloud"
+      "place": "Sala: Auditorio de Ingeniería",
+      "session_title": "Refactor Tensei: Jutsu de refactorización planetaria",
+      "session_desc": "Como desarrolladores no siempre trabajamos en proyectos nuevos, hay veces que tenemos que trabajar en proyectos legacy. Esta charla trata de dar pequeños tips sobre como refactorizar aplicaciones web un caso concreto sobre refactorización de aplicaciones en React, que hacer, que no hacer y pedir que te aumenten el sueldo",
+      "speaker_image": "https://firebasestorage.googleapis.com/v0/b/devfest-cdmx-19.appspot.com/o/speakers%2F1574141754398-joel-humberto.jpg?alt=media&token=645ea4fa-c50e-4dd1-87e8-41ff5f18ed26",
+      "speaker_name": "Joel Humberto Gómez",
+      "speaker_desc": "GDE Web Technologies & Maps",
+      "track": "web"
     },
     {
       "session_id": "2",
-      "session_start_time": "9:30 AM",
-      "session_total_time": "30 Mins",
+      "session_start_time": "10:00 AM",
+      "place": "Sala: Salón 9008",
       "session_title": "How I Became a Mobile Developer with Firebase and Flutter",
-      "session_desc": "The async/await feature allows you to write the asynchronous code in a straightforward way without a long list of callbacks. Used in C# for quite a while already, it has proven to be extremely useful.In Kotlin you have async and await as library functions implemented using coroutines. A coroutine is a light-weight thread that can be suspended and resumed later. Very precise definition, but might be confusing at first. What 'light-weight thread' means? How does suspension work? This talk uncovers the magic. We'll discuss the concept of coroutines, the power of async/await, and how you can benefit from defining your asynchronous computations using suspend function. The content of this video was not produced or created by Google.",
+      "session_desc": "We frequently use a store management with NgRx but like all libraries, sometimes we need differents behavior or maybe something more complex or maybe something more simple, and of course maybe something more lightweight. If you are the kind of developer whose like the best practices, if you like have in your project just what you need and love create your own custom code I'll be glad to show all you need to know to do it!.",
       "speaker_image": "https://devfest.withgoogle.com/api/assets?path=/gs/gweb-gc-gather-production.appspot.com/files/L2FwcGhvc3RpbmdfZ2xvYmFsL2Jsb2JzL0FFbkIyVW9DRktRcllTZDN1T2VINnhiUC11M2pVUFZFLVI0dVh5czF6d2lKNGRwanJjVjJhWm1zSUJZelVkZzBRaG9uRkNJZmhVZEg3ZGpVV0RhRmpQWXFYeHU0Y1ZDRmROb3FQYnVBQ2VKMWdOSFRHS3B0YWxRLk8xa3k2cVpFOG15UFAyRnk",
-      "speaker_name": "Laura Morinigo",
-      "speaker_desc": "Software Developer, DMod Labs",
-      "track": "mobile"
+      "speaker_name": "Mayra Rodriguez",
+      "speaker_desc": "GDE Angular & WTM Ambassador",
+      "track": "web"
     },
     {
       "session_id": "3",
