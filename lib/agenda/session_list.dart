@@ -42,23 +42,22 @@ class SessionList extends StatelessWidget {
                     .textTheme
                     .title
                     .copyWith(fontSize: 14, fontWeight: FontWeight.bold),
-                // children: [
-                //   TextSpan(
-                //     text: allSessions[i].sessionStartTime,
-                //     style: Theme.of(context).textTheme.subtitle.copyWith(
-                //           fontSize: 12,
-                //         ),
-                //   ),
-                // ],
               ),
             ),
-            leading: Hero(
-              tag: allSessions[i].speakerImage,
+            leading:Container( 
+              width: 55,
+              height: 55,
+             child: Card(
+              // tag: allSessions[i].speakerImage,
+              
+              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0),),
               child: CircleAvatar(
-                radius: 30,
+                radius: 20,
                 backgroundImage:
                     CachedNetworkImageProvider(allSessions[i].speakerImage),
               ),
+            ),
+
             ),
             title: RichText(
               text: TextSpan(
