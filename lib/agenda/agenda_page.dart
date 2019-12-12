@@ -1,8 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_devfest/agenda/IA_pages.dart';
 import 'package:flutter_devfest/agenda/cloud_screen.dart';
+import 'package:flutter_devfest/agenda/digital_page.dart';
 import 'package:flutter_devfest/agenda/diversidad_page.dart';
+import 'package:flutter_devfest/agenda/emprendimiento_page.dart';
 import 'package:flutter_devfest/agenda/mobile_screen.dart';
 import 'package:flutter_devfest/agenda/product_page.dart';
 import 'package:flutter_devfest/agenda/web_screen.dart';
@@ -18,21 +21,21 @@ class AgendaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var _homeBloc = HomeBloc();
     return DefaultTabController(
-      length: 5,
+      length: 8,
       child: DevScaffold(
         title: "Agenda",
         tabBar: TabBar(
           indicatorSize: TabBarIndicatorSize.label,
           indicatorColor: Tools.multiColors[Random().nextInt(4)],
           labelStyle: TextStyle(
-            fontSize: 8,
+            fontSize: 10,
           ),
-          isScrollable: false,
+          isScrollable: true,
           tabs: <Widget>[
             Tab(
-              child: Text("Web"),
+              child: Text("Producto"),
               icon: Icon(
-                FontAwesomeIcons.chrome,
+                FontAwesomeIcons.productHunt,
                 size: 15,
               ),
             ),
@@ -44,23 +47,44 @@ class AgendaPage extends StatelessWidget {
               ),
             ),
             Tab(
-              child: Text("Mobile"),
+              child: Text("Web"),
+              icon: Icon(
+                FontAwesomeIcons.chrome,
+                size: 15,
+              ),
+            ),
+            Tab(
+              child: Text("Móvil"),
+              icon: Icon(
+                FontAwesomeIcons.android,
+                size: 15,
+              ),
+            ),
+            Tab(
+              child: Text("Digital"),
               icon: Icon(
                 FontAwesomeIcons.mobile,
                 size: 15,
               ),
             ),
             Tab(
-              child: Text("Product"),
+              child: Text("Emprendimiento"),
               icon: Icon(
-                FontAwesomeIcons.productHunt,
+                FontAwesomeIcons.businessTime,
                 size: 15,
               ),
             ),
             Tab(
               child: Text("Diversidad"),
               icon: Icon(
-                FontAwesomeIcons.diceFive,
+                FontAwesomeIcons.battleNet,
+                size: 15,
+              ),
+            ),
+            Tab(
+              child: Text("AI"),
+              icon: Icon(
+                FontAwesomeIcons.chessKing,
                 size: 15,
               ),
             )
@@ -78,6 +102,15 @@ class AgendaPage extends StatelessWidget {
               homeBloc: _homeBloc,
             ),
             ProductScreen(
+              homeBloc: _homeBloc,
+            ),
+            DigitalScreen(
+              homeBloc: _homeBloc,
+            ),
+            EmprendimientoScreen(
+              homeBloc: _homeBloc,
+            ),
+            IaScreen(
               homeBloc: _homeBloc,
             ),
             DiversidadScreen(
