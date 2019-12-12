@@ -92,16 +92,16 @@ class AgendaPage extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            WebScreen(
+             ProductScreen(
               homeBloc: _homeBloc,
             ),
-            CloudScreen(
+             CloudScreen(
               homeBloc: _homeBloc,
             ),
-            MobileScreen(
+             WebScreen(
               homeBloc: _homeBloc,
-            ),
-            ProductScreen(
+            ),  
+             MobileScreen(
               homeBloc: _homeBloc,
             ),
             DigitalScreen(
@@ -110,10 +110,10 @@ class AgendaPage extends StatelessWidget {
             EmprendimientoScreen(
               homeBloc: _homeBloc,
             ),
-            IaScreen(
+             DiversidadScreen(
               homeBloc: _homeBloc,
             ),
-            DiversidadScreen(
+            IaScreen(
               homeBloc: _homeBloc,
             ),
           ],
