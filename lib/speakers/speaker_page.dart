@@ -80,7 +80,7 @@ class SpeakerPage extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              speakers[i].tags,
+                              "Skills: "+speakers[i].tags,
                               style: Theme.of(context).textTheme.subtitle,
                             ),
                             SizedBox(
