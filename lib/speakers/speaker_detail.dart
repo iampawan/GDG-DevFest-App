@@ -49,7 +49,7 @@ class SpeakerDetail extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                "${speaker.firstName}",
+                "${speaker.firstName}" + " " + "${speaker.lastName}",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.title.copyWith(
                       fontSize: 20,

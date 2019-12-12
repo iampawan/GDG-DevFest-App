@@ -42,14 +42,14 @@ class SessionList extends StatelessWidget {
                     .textTheme
                     .title
                     .copyWith(fontSize: 14, fontWeight: FontWeight.bold),
-                children: [
-                  TextSpan(
-                    text: allSessions[i].sessionStartTime,
-                    style: Theme.of(context).textTheme.subtitle.copyWith(
-                          fontSize: 12,
-                        ),
-                  ),
-                ],
+                // children: [
+                //   TextSpan(
+                //     text: allSessions[i].sessionStartTime,
+                //     style: Theme.of(context).textTheme.subtitle.copyWith(
+                //           fontSize: 12,
+                //         ),
+                //   ),
+                // ],
               ),
             ),
             leading: Hero(
