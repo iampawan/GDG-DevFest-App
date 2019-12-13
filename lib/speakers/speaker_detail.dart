@@ -2,28 +2,16 @@ import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_devfest/home/session.dart';
-// import 'package:flutter_devfest/home/speaker.dart';
+import 'package:flutter_devfest/home/speaker.dart';
 import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'package:url_launcher/url_launcher.dart';
 
-class SessionDetail extends StatelessWidget {
-  static const String routeName = "/session_detail";
-  final Session session;
 
-  SessionDetail({Key key, @required this.session}) : super(key: key);
+class SpeakerDetail extends StatelessWidget {
+  static const String routeName = "speaker_detil";
+  final Speaker speaker;
 
-  Widget socialActions(context) => FittedBox(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            
-           
-          ],
-        ),
-      );
+  const SpeakerDetail({Key key,@required this.speaker}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +25,11 @@ class SessionDetail extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: Hero(
-                  tag: session.speakerImage,
+                  tag: speaker.urlPhoto,
                   child: CircleAvatar(
                     radius: 100.0,
                     backgroundImage: CachedNetworkImageProvider(
-                      session.speakerImage,
+                      speaker.urlPhoto,
                     ),
                   ),
                 ),
@@ -50,7 +38,7 @@ class SessionDetail extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                "${session.sessionPlace}",
+                "${speaker.tags}",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.title.copyWith(
                       fontSize: 14,
@@ -61,7 +49,7 @@ class SessionDetail extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                "${session.sessionTitle}",
+                "${speaker.firstName}" + " " + "${speaker.lastName}",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.title.copyWith(
                       fontSize: 20,
@@ -72,7 +60,7 @@ class SessionDetail extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                session.sessionDesc,
+                speaker.job,
                 textAlign: TextAlign.center,
                 style:
                     Theme.of(context).textTheme.caption.copyWith(fontSize: 13),
@@ -80,12 +68,26 @@ class SessionDetail extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-             
             ],
           ),
         ),
       ),
-      title: session.speakerName,
+      title: speaker.firstName + " " +speaker.lastName,
     );
   }
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //     appBar: AppBar(
+  //       title: Text("Second Route"),
+  //     ),
+  //     body: Center(
+  //       child: RaisedButton(
+  //         onPressed: () {
+  //           Navigator.pop(context);
+  //         },
+  //         child: Text('Go back!'),
+  //       ),
+  //     ),
+  //   );
+  // }
 }

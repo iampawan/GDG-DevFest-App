@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/agenda/session_detail.dart';
+
 import 'package:flutter_devfest/home/session.dart';
 import 'package:flutter_devfest/utils/tools.dart';
 
@@ -29,34 +30,34 @@ class SessionList extends StatelessWidget {
                   ),
                 ),
               );
+
             },
-            // dense: true,
+            dense: true,
             isThreeLine: true,
             trailing: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text: "${allSessions[i].sessionTotalTime}\n",
+                text: "${allSessions[i].sessionStartTime}\n",
                 style: Theme.of(context)
                     .textTheme
                     .title
                     .copyWith(fontSize: 14, fontWeight: FontWeight.bold),
-                children: [
-                  TextSpan(
-                    text: allSessions[i].sessionStartTime,
-                    style: Theme.of(context).textTheme.subtitle.copyWith(
-                          fontSize: 12,
-                        ),
-                  ),
-                ],
               ),
             ),
-            leading: Hero(
-              tag: allSessions[i].speakerImage,
+            leading:Container( 
+              width: 55,
+              height: 55,
+             child: Card(
+              // tag: allSessions[i].speakerImage,
+              
+              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0),),
               child: CircleAvatar(
-                radius: 30,
+                radius: 20,
                 backgroundImage:
                     CachedNetworkImageProvider(allSessions[i].speakerImage),
               ),
+            ),
+
             ),
             title: RichText(
               text: TextSpan(

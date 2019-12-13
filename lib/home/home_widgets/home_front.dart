@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/agenda/agenda_page.dart';
 import 'package:flutter_devfest/config/index.dart';
-import 'package:flutter_devfest/faq/faq_page.dart';
 import 'package:flutter_devfest/map/map_page.dart';
 import 'package:flutter_devfest/speakers/speaker_page.dart';
-import 'package:flutter_devfest/sponsors/sponsor_page.dart';
-import 'package:flutter_devfest/team/team_page.dart';
 import 'package:flutter_devfest/universal/image_card.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
 import 'package:flutter_devfest/utils/tools.dart';
@@ -57,28 +54,6 @@ class HomeFront extends StatelessWidget {
                 Navigator.pushNamed(context, SpeakerPage.routeName),
           ),
           RaisedButton(
-            child: Text("Sponsors"),
-            shape: StadiumBorder(),
-            color: Colors.orange,
-            colorBrightness: Brightness.dark,
-            onPressed: () =>
-                Navigator.pushNamed(context, SponsorPage.routeName),
-          ),
-          RaisedButton(
-            child: Text("Team"),
-            shape: StadiumBorder(),
-            color: Colors.purple,
-            colorBrightness: Brightness.dark,
-            onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
-          ),
-          RaisedButton(
-            child: Text("FAQ"),
-            shape: StadiumBorder(),
-            color: Colors.brown,
-            colorBrightness: Brightness.dark,
-            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
-          ),
-          RaisedButton(
             child: Text("Locate Us"),
             shape: StadiumBorder(),
             color: Colors.blue,
@@ -107,25 +82,6 @@ class HomeFront extends StatelessWidget {
                 Navigator.pushNamed(context, SpeakerPage.routeName),
           ),
           ActionCard(
-            icon: Icons.people,
-            color: Colors.amber,
-            title: Devfest.team_text,
-            onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
-          ),
-          ActionCard(
-            icon: Icons.attach_money,
-            color: Colors.purple,
-            title: Devfest.sponsor_text,
-            onPressed: () =>
-                Navigator.pushNamed(context, SponsorPage.routeName),
-          ),
-          ActionCard(
-            icon: Icons.question_answer,
-            color: Colors.brown,
-            title: Devfest.faq_text,
-            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
-          ),
-          ActionCard(
             icon: Icons.map,
             color: Colors.blue,
             title: Devfest.map_text,
@@ -141,40 +97,13 @@ class HomeFront extends StatelessWidget {
             IconButton(
               icon: Icon(FontAwesomeIcons.facebookF),
               onPressed: () async {
-                await _launchURL("https://facebook.com/imthepk");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.twitter),
-              onPressed: () async {
-                await _launchURL("https://twitter.com/imthepk");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.linkedinIn),
-              onPressed: () async {
-                _launchURL("https://linkedin.com/in/imthepk");
+                await _launchURL("https://www.facebook.com/gdgcloudmx/?__tn__=kCH-R&eid=ARDSKyiuIdID3UCgHyFQgdXZFa5diKfd-_5uE0Yzek4km5mKy2ce8FBBhswkcT2pOFlu6Xtcl_6crz2m&hc_ref=ARR7khmuZOpb-c7qd0n_uXsEj9mnTX1nNWjuBWgZZuj0sPuN2B5KAPEOaBQxVHF6CRs&fref=nf&__xts__[0]=68.ARBOr9sBKKqVzlay4LVPAKn_dbKZgGOYVmYrl4T3bJnr0JOc5E-Dzhf7JYlcE5WCXZgAN7ykOKD4xojvfqYNn7s-Zl05aS-x5SeFHjVlVN8ZwcQjRTAvvz5Cz2RSiU0kbgdOXZSVwcgVBaYwl-DoE83O6uIUnEVcoYNXpm_aUEzW4xSLA1G_AGIddhSp3WbpoP5FCseX8C8BMDnIylGs1pICgoCQFGb8jWhm8bynjetRhIfVJ_Yy11q45PtBZwN3QPmpoQoScEusEhGz00ugZac33pCgADI-0Q5nLEdM574WP_1jXOm31SfUZNDJRHc1DMr5Q4yuyagLRGUq3ofjlA");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.youtube),
               onPressed: () async {
-                await _launchURL("https://youtube.com/mtechviral");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.meetup),
-              onPressed: () async {
-                await _launchURL("https://meetup.com/");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.envelope),
-              onPressed: () async {
-                var emailUrl =
-                    '''mailto:mtechviral@gmail.com?subject=Support Needed For DevFest App&body={Name: Pawan Kumar},Email: pawan221b@gmail.com}''';
-                var out = Uri.encodeFull(emailUrl);
-                await _launchURL(out);
+                await _launchURL("https://youtu.be/hTJ_-MxHKMY");
               },
             ),
           ],

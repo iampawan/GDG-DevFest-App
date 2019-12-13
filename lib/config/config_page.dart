@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_devfest/agenda/agenda_page.dart';
 import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/faq/faq_page.dart';
 import 'package:flutter_devfest/find_devfest/find_devfest_page.dart';
 import 'package:flutter_devfest/home/home_page.dart';
+import 'package:flutter_devfest/login/landingPage.dart';
 import 'package:flutter_devfest/map/map_page.dart';
 import 'package:flutter_devfest/speakers/speaker_page.dart';
 import 'package:flutter_devfest/sponsors/sponsor_page.dart';
 import 'package:flutter_devfest/team/team_page.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
+
+import 'package:flutter_devfest/login/login_page.dart';
 
 class ConfigPage extends StatefulWidget {
   static const String routeName = "/";
@@ -60,7 +64,7 @@ class _ConfigPageState extends State<ConfigPage> {
                 elevation: 0.0,
               ),
             ),
-            home: HomePage(),
+            home: LandingPage(),
             routes: {
               HomePage.routeName: (context) => HomePage(),
               SpeakerPage.routeName: (context) => SpeakerPage(),

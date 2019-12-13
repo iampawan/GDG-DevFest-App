@@ -6,6 +6,8 @@ import 'package:flutter_devfest/utils/devfest.dart';
 import 'package:flutter_devfest/utils/simple_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// import 'package:firebase_auth/firebase_auth.dart';
+
 import 'config/config_page.dart';
 
 Future<void> main() async {

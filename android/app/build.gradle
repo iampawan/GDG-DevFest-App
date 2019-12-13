@@ -24,6 +24,8 @@ if (flutterVersionName == null) {
 apply plugin: 'com.android.application'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
+apply plugin: 'com.google.gms.google-services'
+
    def keystoreProperties = new Properties()
    def keystorePropertiesFile = rootProject.file('key.properties')
    if (keystorePropertiesFile.exists()) {
@@ -39,7 +41,7 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.mtechviral.devfest"
+        applicationId "com.example.devfest_cdmx"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
@@ -48,22 +50,22 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
     }
 
       signingConfigs {
-       release {
-           keyAlias keystoreProperties['keyAlias']
-           keyPassword keystoreProperties['keyPassword']
-           storeFile file(keystoreProperties['storeFile'])
-           storePassword keystoreProperties['storePassword']
-       }
+    //    release {
+    //        keyAlias keystoreProperties['keyAlias']
+    //        keyPassword keystoreProperties['keyPassword']
+    //        storeFile file(keystoreProperties['storeFile'])
+    //        storePassword keystoreProperties['storePassword']
+    //    }
    }
    buildTypes {
-       release {
-          signingConfig signingConfigs.release
+    //    release {
+    //       signingConfig signingConfigs.release
 
-            minifyEnabled true
-            useProguard true
+    //         minifyEnabled true
+    //         useProguard true
 
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-       }
+    //         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    //    }
    }
 }
 
@@ -75,4 +77,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
 }
+
