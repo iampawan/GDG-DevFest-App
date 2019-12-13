@@ -6,6 +6,7 @@ import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/faq/faq_page.dart';
 import 'package:flutter_devfest/find_devfest/find_devfest_page.dart';
 import 'package:flutter_devfest/home/home_page.dart';
+import 'package:flutter_devfest/login/landingPage.dart';
 import 'package:flutter_devfest/map/map_page.dart';
 import 'package:flutter_devfest/speakers/speaker_page.dart';
 import 'package:flutter_devfest/sponsors/sponsor_page.dart';
@@ -63,7 +64,7 @@ class _ConfigPageState extends State<ConfigPage> {
                 elevation: 0.0,
               ),
             ),
-            home: LoginPage(),
+            home: LandingPage(),
             routes: {
               HomePage.routeName: (context) => HomePage(),
               SpeakerPage.routeName: (context) => SpeakerPage(),

@@ -27,7 +27,6 @@ class _LoginPageState extends State<LoginPage> {
                   radius: 160.0,
                 ),
               ),
-              
               SizedBox(height: 50),
               _signInButton(),
             ],
