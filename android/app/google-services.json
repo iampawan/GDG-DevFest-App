@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:36457823190:android:27bf247666effa41144277",
         "android_client_info": {
-          "package_name": "com.mtechviral.devfest"
+          "package_name": "com.example.devfest_cdmx"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "36457823190-o9hdffs133gu1lt53tck8rcpvg10jso9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mtechviral.devfest",
+            "package_name": "com.example.devfest_cdmx",
             "certificate_hash": "a8224a149b4004f27b068f8bf9b7367a35606701"
           }
         },
