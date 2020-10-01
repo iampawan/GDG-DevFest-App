@@ -29,7 +29,7 @@ WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
-  // * Get Shared Preference Instance for whole app
+  // * Get Shared Preference Instance for whole app small storage
   Devfest.prefs = await SharedPreferences.getInstance();
 
   //* To check the app is running in debug and set some variables for that
